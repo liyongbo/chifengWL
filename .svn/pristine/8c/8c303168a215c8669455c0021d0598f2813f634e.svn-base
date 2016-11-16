@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="#">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+	<ul>
+    	<li><a href="basisinfo -基础信息管理.html">基础信息管理</a>
+        	<ul>
+            	<li><a href="basisinfo_mdd -基础信息管理 - 目的地信息.html" >目的地信息</a></li>
+            	<li><a href="basisinfo_sj-基础信息管理 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_clxx-基础信息管理 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="#">汇总列表</a></li>
+        <li><a href="basisinfo_sj-装车.html">出库装车交接单</a></li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">出库汇总列表  2016.01.12</div>
+        <div class="ez_khtab">
+            <div class="ez_khoper w3"><button type="submit" class="ez_btn1" style="width:75px;">打印</button></div>
+            <table class="altrowstable" id="alternatecolor">
+                <tr>
+                    <th>序号</th>
+                    <th>目的地</th>
+                    <th>单数</th>
+                    <th>箱数</th>
+                    <th>代收货款</th>
+                    <th>重要提示</th>
+                    <th>状态</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>北京</td>
+                    <td>5</td>
+                    <td>200</td>
+                    <td>￥30000</td>
+                    <td>加急</td>
+                    <td>已装车</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>北京</td>
+                    <td>5</td>
+                    <td>200</td>
+                    <td>￥30000</td>
+                    <td>加急</td>
+                    <td>已装车</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>北京</td>
+                    <td>5</td>
+                    <td>200</td>
+                    <td>￥30000</td>
+                    <td>加急</td>
+                    <td>已装车</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>北京</td>
+                    <td>5</td>
+                    <td>200</td>
+                    <td>￥30000</td>
+                    <td>加急</td>
+                    <td>已装车</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>北京</td>
+                    <td>5</td>
+                    <td>200</td>
+                    <td>￥30000</td>
+                    <td>加急</td>
+                    <td>已装车</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>北京</td>
+                    <td>5</td>
+                    <td>200</td>
+                    <td>￥30000</td>
+                    <td>加急</td>
+                    <td>已装车</td>
+                    <td></td>
+                </tr>
+            </table>
+            <p class="Accord">每页显示 10 条，共 50 页，总计 500 条</p>
+            <div class="scott">
+                <span class="disabled"> <上一页 </span>
+                <span class="current">1</span>
+                <a href="#?page=2">2</a>
+                <a href="#?page=3">3</a>
+                <a href="#?page=4">4</a>
+                <a href="#?page=5">5</a>
+                <a href="#?page=6">6</a>
+                <a href="#?page=7">7</a>
+                <div class="more">...</div>
+                <a href="#?page=7">20</a>
+                <a href="#?page=2">下一页 > </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

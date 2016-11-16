@@ -1,0 +1,116 @@
+﻿
+2015.12.09 21:28:59
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/PlanProjectList.aspx?kw=万安东路&areaid=undefined&treeid=14
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Boolean <Page_Load>b__4(Entity.Project)
+	堆栈信息：   在 web.Control.PlanProjectList.<>c__DisplayClassf.<Page_Load>b__4(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\PlanProjectList.aspx.cs:行号 77
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.PlanProjectList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\PlanProjectList.aspx.cs:行号 77
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.09 21:32:06
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/DesProjectList.aspx?kw=万安东路&areaid=undefined&treeid=15
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Boolean <Page_Load>b__2(Entity.Project)
+	堆栈信息：   在 web.Control.DesProjectList.<>c__DisplayClassa.<Page_Load>b__2(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.DesProjectList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.09 21:32:27
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/DesProjectList.aspx?kw=万安东路&areaid=undefined&treeid=15
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Boolean <Page_Load>b__2(Entity.Project)
+	堆栈信息：   在 web.Control.DesProjectList.<>c__DisplayClassa.<Page_Load>b__2(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.DesProjectList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.09 21:32:35
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/DesProjectList.aspx?kw=万安东路&areaid=undefined&treeid=15
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Boolean <Page_Load>b__2(Entity.Project)
+	堆栈信息：   在 web.Control.DesProjectList.<>c__DisplayClassa.<Page_Load>b__2(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.DesProjectList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.09 21:33:35
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/DesProjectList.aspx?kw=万安东路&areaid=undefined&treeid=15
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Boolean <Page_Load>b__2(Entity.Project)
+	堆栈信息：   在 web.Control.DesProjectList.<>c__DisplayClassa.<Page_Load>b__2(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.DesProjectList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\DesProjectList.aspx.cs:行号 80
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

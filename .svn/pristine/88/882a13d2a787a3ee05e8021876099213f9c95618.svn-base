@@ -1,0 +1,31 @@
+﻿
+2015.11.16 11:54:52
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getProjectLineByID
+	错误信息：因 URL 意外地以“/getProjectLineByID”结束，请求格式无法识别。
+	错误源：System.Web.Services
+	异常方法：System.Web.IHttpHandler CoreGetHandler(System.Type, System.Web.HttpContext, System.Web.HttpRequest, System.Web.HttpResponse)
+	堆栈信息：   在 System.Web.Services.Protocols.WebServiceHandlerFactory.CoreGetHandler(Type type, HttpContext context, HttpRequest request, HttpResponse response)
+   在 System.Web.Services.Protocols.WebServiceHandlerFactory.GetHandler(HttpContext context, String verb, String url, String filePath)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.11.16 15:18:23
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/adminback/Login.aspx
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------

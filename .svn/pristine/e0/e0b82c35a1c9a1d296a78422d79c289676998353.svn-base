@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6DEB1551-9A30-4006-8003-32F87E7001EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>web</RootNamespace>
+    <AssemblyName>web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\DllList\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder">
+      <HintPath>..\DllList\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="code.aspx" />
+    <Content Include="api\ws.asmx" />
+    <Content Include="Global.asax" />
+    <Content Include="inc\leftTree.inc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="inc\footer.inc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="inc\header.inc" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\commn.js" />
+    <Content Include="js\jquery\jquery-1.8.2.min.js" />
+    <Content Include="js\jquery\print\jquery.PrintArea.js" />
+    <Content Include="js\hy\hy.js" />
+    <Content Include="js\jquery\validate\jquery.form.js" />
+    <Content Include="js\jquery\validate\jquery.validate.js" />
+    <Content Include="js\jquery\json2.js" />
+    <Content Include="js\Plug\layer\layer.js" />
+    <Content Include="js\Plug\layer\mobile\layer.js" />
+    <Content Include="js\Plug\layer\mobile\need\layer.css" />
+    <Content Include="js\Plug\layer\skin\default\icon-ext.png" />
+    <Content Include="js\Plug\layer\skin\default\icon.png" />
+    <Content Include="js\Plug\layer\skin\default\layer.css" />
+    <Content Include="js\Plug\layer\skin\default\loading-0.gif" />
+    <Content Include="js\Plug\layer\skin\default\loading-1.gif" />
+    <Content Include="js\Plug\layer\skin\default\loading-2.gif" />
+    <Content Include="js\Plug\layer\skin\moon\default.png" />
+    <Content Include="js\Plug\layer\skin\moon\style.css" />
+    <Content Include="js\Plug\layui\css\layui.css" />
+    <Content Include="js\Plug\layui\css\mobile.css" />
+    <Content Include="js\Plug\layui\css\modules\code.css" />
+    <Content Include="js\Plug\layui\css\modules\laydate\icon.png" />
+    <Content Include="js\Plug\layui\css\modules\laydate\laydate.css" />
+    <Content Include="js\Plug\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="js\Plug\layui\css\modules\layer\default\icon.png" />
+    <Content Include="js\Plug\layui\css\modules\layer\default\layer.css" />
+    <Content Include="js\Plug\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="js\Plug\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="js\Plug\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="js\Plug\layui\font\iconfont.svg" />
+    <Content Include="js\Plug\layui\images\face\0.gif" />
+    <Content Include="js\Plug\layui\images\face\1.gif" />
+    <Content Include="js\Plug\layui\images\face\10.gif" />
+    <Content Include="js\Plug\layui\images\face\11.gif" />
+    <Content Include="js\Plug\layui\images\face\12.gif" />
+    <Content Include="js\Plug\layui\images\face\13.gif" />
+    <Content Include="js\Plug\layui\images\face\14.gif" />
+    <Content Include="js\Plug\layui\images\face\15.gif" />
+    <Content Include="js\Plug\layui\images\face\16.gif" />
+    <Content Include="js\Plug\layui\images\face\17.gif" />
+    <Content Include="js\Plug\layui\images\face\18.gif" />
+    <Content Include="js\Plug\layui\images\face\19.gif" />
+    <Content Include="js\Plug\layui\images\face\2.gif" />
+    <Content Include="js\Plug\layui\images\face\20.gif" />
+    <Content Include="js\Plug\layui\images\face\21.gif" />
+    <Content Include="js\Plug\layui\images\face\22.gif" />
+    <Content Include="js\Plug\layui\images\face\23.gif" />
+    <Content Include="js\Plug\layui\images\face\24.gif" />
+    <Content Include="js\Plug\layui\images\face\25.gif" />
+    <Content Include="js\Plug\layui\images\face\26.gif" />
+    <Content Include="js\Plug\layui\images\face\27.gif" />
+    <Content Include="js\Plug\layui\images\face\28.gif" />
+    <Content Include="js\Plug\layui\images\face\29.gif" />
+    <Content Include="js\Plug\layui\images\face\3.gif" />
+    <Content Include="js\Plug\layui\images\face\30.gif" />
+    <Content Include="js\Plug\layui\images\face\31.gif" />
+    <Content Include="js\Plug\layui\images\face\32.gif" />
+    <Content Include="js\Plug\layui\images\face\33.gif" />
+    <Content Include="js\Plug\layui\images\face\34.gif" />
+    <Content Include="js\Plug\layui\images\face\35.gif" />
+    <Content Include="js\Plug\layui\images\face\36.gif" />
+    <Content Include="js\Plug\layui\images\face\37.gif" />
+    <Content Include="js\Plug\layui\images\face\38.gif" />
+    <Content Include="js\Plug\layui\images\face\39.gif" />
+    <Content Include="js\Plug\layui\images\face\4.gif" />
+    <Content Include="js\Plug\layui\images\face\40.gif" />
+    <Content Include="js\Plug\layui\images\face\41.gif" />
+    <Content Include="js\Plug\layui\images\face\42.gif" />
+    <Content Include="js\Plug\layui\images\face\43.gif" />
+    <Content Include="js\Plug\layui\images\face\44.gif" />
+    <Content Include="js\Plug\layui\images\face\45.gif" />
+    <Content Include="js\Plug\layui\images\face\46.gif" />
+    <Content Include="js\Plug\layui\images\face\47.gif" />
+    <Content Include="js\Plug\layui\images\face\48.gif" />
+    <Content Include="js\Plug\layui\images\face\49.gif" />
+    <Content Include="js\Plug\layui\images\face\5.gif" />
+    <Content Include="js\Plug\layui\images\face\50.gif" />
+    <Content Include="js\Plug\layui\images\face\51.gif" />
+    <Content Include="js\Plug\layui\images\face\52.gif" />
+    <Content Include="js\Plug\layui\images\face\53.gif" />
+    <Content Include="js\Plug\layui\images\face\54.gif" />
+    <Content Include="js\Plug\layui\images\face\55.gif" />
+    <Content Include="js\Plug\layui\images\face\56.gif" />
+    <Content Include="js\Plug\layui\images\face\57.gif" />
+    <Content Include="js\Plug\layui\images\face\58.gif" />
+    <Content Include="js\Plug\layui\images\face\59.gif" />
+    <Content Include="js\Plug\layui\images\face\6.gif" />
+    <Content Include="js\Plug\layui\images\face\60.gif" />
+    <Content Include="js\Plug\layui\images\face\61.gif" />
+    <Content Include="js\Plug\layui\images\face\62.gif" />
+    <Content Include="js\Plug\layui\images\face\63.gif" />
+    <Content Include="js\Plug\layui\images\face\64.gif" />
+    <Content Include="js\Plug\layui\images\face\65.gif" />
+    <Content Include="js\Plug\layui\images\face\66.gif" />
+    <Content Include="js\Plug\layui\images\face\67.gif" />
+    <Content Include="js\Plug\layui\images\face\68.gif" />
+    <Content Include="js\Plug\layui\images\face\69.gif" />
+    <Content Include="js\Plug\layui\images\face\7.gif" />
+    <Content Include="js\Plug\layui\images\face\70.gif" />
+    <Content Include="js\Plug\layui\images\face\71.gif" />
+    <Content Include="js\Plug\layui\images\face\8.gif" />
+    <Content Include="js\Plug\layui\images\face\9.gif" />
+    <Content Include="js\Plug\layui\layui.js" />
+    <Content Include="js\Plug\layui\lay\dest\layui.all.js" />
+    <Content Include="js\Plug\layui\lay\dest\layui.mod.js" />
+    <Content Include="js\Plug\layui\lay\lib\jquery.js" />
+    <Content Include="js\Plug\layui\lay\modules\code.js" />
+    <Content Include="js\Plug\layui\lay\modules\element.js" />
+    <Content Include="js\Plug\layui\lay\modules\flow.js" />
+    <Content Include="js\Plug\layui\lay\modules\form.js" />
+    <Content Include="js\Plug\layui\lay\modules\laydate.js" />
+    <Content Include="js\Plug\layui\lay\modules\layedit.js" />
+    <Content Include="js\Plug\layui\lay\modules\layer.js" />
+    <Content Include="js\Plug\layui\lay\modules\laypage.js" />
+    <Content Include="js\Plug\layui\lay\modules\laytpl.js" />
+    <Content Include="js\Plug\layui\lay\modules\tree.js" />
+    <Content Include="js\Plug\layui\lay\modules\upload.js" />
+    <Content Include="js\Plug\layui\lay\modules\util.js" />
+    <Content Include="js\Plug\My97DatePicker\calendar.js" />
+    <Content Include="js\Plug\My97DatePicker\lang\en.js" />
+    <Content Include="js\Plug\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="js\Plug\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="js\Plug\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="js\Plug\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="js\Plug\My97DatePicker\skin\default\img.gif" />
+    <Content Include="js\Plug\My97DatePicker\skin\twoer\datepicker-dev.css" />
+    <Content Include="js\Plug\My97DatePicker\skin\twoer\datepicker.css" />
+    <Content Include="js\Plug\My97DatePicker\skin\twoer\img.gif" />
+    <Content Include="js\Plug\My97DatePicker\skin\twoer\img.png" />
+    <Content Include="js\Plug\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="js\Plug\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="js\Plug\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="js\Plug\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="js\Plug\My97DatePicker\WdatePicker.js" />
+    <Content Include="js\jquery\scrollstop\jquery.scrollstop.js" />
+    <Content Include="js\jquery\scrollstop\jquery.scrollstop.min.js" />
+    <Content Include="js\hy\valRegx.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Zhuxiao.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="api\ws.asmx.cs">
+      <DependentUpon>ws.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="code.aspx.cs">
+      <DependentUpon>code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="code.aspx.designer.cs">
+      <DependentUpon>code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zhuxiao.aspx.cs">
+      <DependentUpon>Zhuxiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zhuxiao.aspx.designer.cs">
+      <DependentUpon>Zhuxiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigsFile\Base.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ConfigsFile\SysConfig.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="js\Plug\layui\font\iconfont.eot" />
+    <Content Include="js\Plug\layui\font\iconfont.ttf" />
+    <Content Include="js\Plug\layui\font\iconfont.woff" />
+    <None Include="Properties\PublishProfiles\xh.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{84d14952-aef2-4b40-9614-a19fb9491e3a}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chsword.Excel2Object\Chsword.Excel2Object.csproj">
+      <Project>{e1a1c76a-cab7-4c75-ae44-bb797cf40d38}</Project>
+      <Name>Chsword.Excel2Object</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configs\Configs\Configs.csproj">
+      <Project>{8cbb07ce-5fe7-4ad2-b413-5abc95ed6132}</Project>
+      <Name>Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{c3784ceb-b697-4504-a218-ada7c7a0e785}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{f934c765-7ae7-4438-9cb7-931efbcb5bac}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58439</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58777/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>封装打印</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+</head>
+
+<body style="background: #f9f9f9;">
+<div class="ez_headBar">
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="#">修改密码</a></div>
+</div>
+<div class="D_Lay">
+    <div class="D_ckdhbox">
+        <h1>出库单号：78545685</h1>
+        <p>
+            配送方式：同城<br/>
+            收件人：波波<br/>
+            地址：北京市通州区梨园新城阳光28号楼2单元1025<br/>
+            联系方式：13800138000
+        </p>
+    </div>
+    <div class="D_sabox">
+        <ul>
+            <li>
+                <span class="left">件数</span>
+                <span class="right"><input type="email" class="D_input1" id="exampleInputEmail1" placeholder="请输入"  style="width:280px;"></span>
+            </li>
+            <li>
+                <span class="left">目的地</span>
+                <span class="right"><input type="email" class="D_input1" id="exampleInputEmail1" placeholder="请输入"  style="width:280px;"></span>
+            </li>
+            <li>
+                <span class="left">段道</span>
+                <span class="right">
+                    <select class="D_input1" style="width:150px;height:40px;">
+                        <option>红山区</option>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>石家庄</option>
+                    </select>
+                    <select class="D_input1" style="width:155px;float:right;">
+                        <option>朝阳北路</option>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>石家庄</option>
+                    </select>
+                </span>
+            </li>
+            <button type="submit" class="D_saboxBtn" style="width:310px;margin:20px 0 0 90px;" onclick="">打 印</button>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿
+2016.04.29 11:45:37
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/taizhang/ProjectManager.aspx?treeid=16
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2016.04.29 14:26:37
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Index.aspx
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2016.04.29 15:26:54
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/control/ProjectDelay.aspx?projectid=undefined&tid=16
+	错误信息：列名 'undefined' 无效。
+列名 'undefined' 无效。
+select top          8 [id],[projectid],[subdelaytime],[agreetime],[createtime] from [ProjectDelay] where  projectid=undefined  order by id desc
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.ProjectDelay_GetListPages(Int32 PageIndex, Int32 PageSize, String strWhere, String oderby, Boolean ascending, Int64& recordCount) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProjectDelay.cs:行号 81
+   在 BLL.ProjectDelay.ProjectDelay_GetListPages(Int32 PageIndex, Int32 PageSize, String strWhere, String oderby, Boolean ascending, Int64& rc) 位置 c:\Users\admin\Desktop\beixin\BLL\ProjectDelay.cs:行号 85
+   在 web.Control.ProjectDelay.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ProjectDelay.aspx.cs:行号 35
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.04.29 15:59:19
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Index.aspx
+	错误信息：等待的操作过时。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2016.04.29 16:59:24
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Control/LuZhengProjectList.aspx?treeid=49
+	错误信息：c:\Users\admin\Desktop\beixin\Web\Control\LuZhengProjectList.aspx(125): error CS1026: 应输入 )
+	错误源：System.Web
+	异常方法：System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2016.04.29 16:59:56
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Control/LuZhengProjectList.aspx?treeid=49
+	错误信息：c:\Users\admin\Desktop\beixin\Web\Control\LuZhengProjectList.aspx(125): error CS1026: 应输入 )
+	错误源：System.Web
+	异常方法：System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2016.04.29 17:00:12
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Control/LuZhengProjectList.aspx?treeid=49
+	错误信息：c:\Users\admin\Desktop\beixin\Web\Control\LuZhengProjectList.aspx(125): error CS1026: 应输入 )
+	错误源：System.Web
+	异常方法：System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2016.04.29 17:00:23
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Control/LuZhengProjectList.aspx?treeid=49
+	错误信息：c:\Users\admin\Desktop\beixin\Web\Control\LuZhengProjectList.aspx(125): error CS1026: 应输入 )
+	错误源：System.Web
+	异常方法：System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------

@@ -1,0 +1,69 @@
+﻿
+2015.12.22 17:06:46
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/fProjectList.aspx?treeid=27
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2015.12.22 17:10:16
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/feedback/feedback.aspx?treeid=27
+	错误信息：超时时间已到。超时时间已到，但是尚未从池中获取连接。出现这种情况可能是因为所有池连接均在使用，并且达到了最大池大小。
+	错误源：System.Data
+	异常方法：Boolean TryGetConnection(System.Data.Common.DbConnection, System.Threading.Tasks.TaskCompletionSource`1[System.Data.ProviderBase.DbConnectionInternal], System.Data.Common.DbConnectionOptions, System.Data.ProviderBase.DbConnectionInternal, System.Data.ProviderBase.DbConnectionInternal ByRef)
+	堆栈信息：   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Area_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Area.cs:行号 92
+   在 BLL.Area.Area_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Area.cs:行号 77
+   在 web.feedback.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\feedback\feedback.aspx.cs:行号 36
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.22 17:10:31
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2015.12.22 17:11:50
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/feedback/feedback.aspx?treeid=27
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------

@@ -1,0 +1,129 @@
+﻿
+2015.12.11 04:57:57
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ManProjectList.aspx?treeid=16
+	错误信息：值不能为 null。
+参数名: value
+	错误源：mscorlib
+	异常方法：System.String GetEnumName(System.Object)
+	堆栈信息：   在 System.RuntimeType.GetEnumName(Object value)
+   在 System.Enum.GetName(Type enumType, Object value)
+   在 ASP.control_manprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ManProjectList.aspx:行号 226
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.11 05:00:17
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ManProjectList.aspx?treeid=16
+	错误信息：值不能为 null。
+参数名: value
+	错误源：mscorlib
+	异常方法：System.String GetEnumName(System.Object)
+	堆栈信息：   在 System.RuntimeType.GetEnumName(Object value)
+   在 System.Enum.GetName(Type enumType, Object value)
+   在 ASP.control_manprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ManProjectList.aspx:行号 226
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.11 05:45:28
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ManProjectList.aspx?treeid=16
+	错误信息：传入的值必须是枚举的枚举基或基础类型，如 Int32。
+参数名: value
+	错误源：mscorlib
+	异常方法：System.String GetEnumName(System.Object)
+	堆栈信息：   在 System.RuntimeType.GetEnumName(Object value)
+   在 System.Enum.GetName(Type enumType, Object value)
+   在 ASP.control_manprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ManProjectList.aspx:行号 226
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.11 05:45:43
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ManProjectList.aspx?treeid=16
+	错误信息：传入的值必须是枚举的枚举基或基础类型，如 Int32。
+参数名: value
+	错误源：mscorlib
+	异常方法：System.String GetEnumName(System.Object)
+	堆栈信息：   在 System.RuntimeType.GetEnumName(Object value)
+   在 System.Enum.GetName(Type enumType, Object value)
+   在 ASP.control_manprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ManProjectList.aspx:行号 226
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.11 05:50:42
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ManProjectList.aspx?treeid=16
+	错误信息：传入的值必须是枚举的枚举基或基础类型，如 Int32。
+参数名: value
+	错误源：mscorlib
+	异常方法：System.String GetEnumName(System.Object)
+	堆栈信息：   在 System.RuntimeType.GetEnumName(Object value)
+   在 System.Enum.GetName(Type enumType, Object value)
+   在 ASP.control_manprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ManProjectList.aspx:行号 226
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.11 13:40:41
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------

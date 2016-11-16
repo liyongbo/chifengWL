@@ -1,0 +1,51 @@
+﻿using BLL;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Web;
+using System.Web.Security;
+using System.Web.Services;
+
+
+namespace wy.api
+{
+    /// <summary>
+    /// ws 的摘要说明
+    /// </summary>
+    [System.Web.Script.Services.ScriptService]
+    public class ws : BLL.MainWebServiceBase
+    {
+
+        /// <summary>
+        /// 密码修改
+        /// </summary>
+        /// <param name="oPwd"></param>
+        /// <param name="userPwd"></param>
+        /// <returns></returns>
+        [WebMethod(EnableSession = true)]
+        public bool updatePwd(string oPwd, string userPwd)
+        {
+            if (!string.IsNullOrEmpty(oPwd) && !string.IsNullOrEmpty(userPwd) && !string.IsNullOrEmpty(BLL.Base.Host.Instance.UserName))
+            {
+                List<Entity.Users> userList = BLL.Users.Users_GetListArray(string.Format("[username]='{0}' and [userpassword]='{1}'", Tools.GetString.NoHTML(BLL.Base.Host.Instance.UserName.Trim()), UserIdentity.PassWordEncode(oPwd)), 1, "[id]", true);
+                if (userList != null && userList.Count > 0)
+                {
+                    Entity.Users user = userList.FirstOrDefault();
+                    user.userpassword = BLL.UserIdentity.PassWordEncode(userPwd);
+                    BLL.Users.Update(user);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+
+    }
+
+}
+

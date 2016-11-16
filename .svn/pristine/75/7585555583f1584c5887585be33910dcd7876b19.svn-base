@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="#">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+	<ul>
+        <li><a href="basisinfo -基础信息管理.html">基础信息管理</a>
+            <ul>
+                <li><a href="basisinfo_mdd -基础信息管理 - 目的地信息.html" >目的地信息</a></li>
+                <li><a href="basisinfo_sj-基础信息管理 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_clxx-基础信息管理 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="#">汇总列表</a></li>
+        <li><a href="basisinfo_sj-装车.html">出库装车交接单</a></li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">车辆信息</div>
+        <div class="ez_khtab">
+            <div class="ez_khoper w3"><button type="submit" class="ez_btn1" onclick="showPop();" style="width:75px;">新增</button></div>
+            <table class="altrowstable" id="alternatecolor">
+                <tr>
+                    <th>车主</th>
+                    <th>车型</th>
+                    <th>车牌号</th>
+                    <th>行驶证号</th>
+                    <th>出厂日期</th>
+                    <th>年龄</th>
+                    <th>备注</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>波波</td>
+                    <td></td>
+                    <td>京C123456</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="javascript:showPop();">修改</a> | <a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>波波</td>
+                    <td></td>
+                    <td>京C123456</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="javascript:showPop();">修改</a> | <a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>波波</td>
+                    <td></td>
+                    <td>京C123456</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="javascript:showPop();">修改</a> | <a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>波波</td>
+                    <td></td>
+                    <td>京C123456</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="javascript:showPop();">修改</a> | <a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>波波</td>
+                    <td></td>
+                    <td>京C123456</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="javascript:showPop();">修改</a> | <a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>波波</td>
+                    <td></td>
+                    <td>京C123456</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="javascript:showPop();">修改</a> | <a href="#">删除</a></td>
+                </tr>
+            </table>
+            <p class="Accord">每页显示 10 条，共 50 页，总计 500 条</p>
+            <div class="scott">
+                <span class="disabled"> <上一页 </span>
+                <span class="current">1</span>
+                <a href="#?page=2">2</a>
+                <a href="#?page=3">3</a>
+                <a href="#?page=4">4</a>
+                <a href="#?page=5">5</a>
+                <a href="#?page=6">6</a>
+                <a href="#?page=7">7</a>
+                <div class="more">...</div>
+                <a href="#?page=7">20</a>
+                <a href="#?page=2">下一页 > </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mydiv" id="popDiv"  style="display:none;">
+    <div class="ez_Tbox">
+        <div class="ez_InfoTit">新增车辆信息</div>
+        <div class="closd"><a href="javascript:closePop();"><img src="img/closd.png" /></a></div>
+        <table class="altrowstable" id="alternatecolor">
+            <tr>
+                <th>车主姓名</th>
+                <th>车型</th>
+                <th>车牌号</th>
+                <th>行驶证号</th>
+                <th>出厂日期</th>
+                <th>车龄</th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+            </tr>
+            <tr>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="王晓光"/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="丰田凯美瑞"/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="京CPIC"/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="123456"/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="2015-2-25"/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="2年"/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder="..."/></td>
+            </tr>
+        </table>
+        <div class="ez_TBtn" style="text-align:center">
+            <button type="submit" class="ez_btn1" onclick="closePop();" style="width:110px;margin-right:20px;">保存</button>
+        </div>
+    </div>
+</div>
+<div class="bg" id="popBgDiv"  style="display:none;"></div>
+
+
+<script type="text/javascript">
+    function showPop(){
+        $("#popDiv").css("display","block");
+        $("#popBgDiv").css("display","block");
+    }
+
+    function closePop(){
+        $("#popDiv").css("display","none");
+        $("#popBgDiv").css("display","none");
+    }
+</script>
+</body>
+</html>

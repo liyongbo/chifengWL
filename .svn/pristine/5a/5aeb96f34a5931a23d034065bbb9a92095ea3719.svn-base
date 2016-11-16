@@ -1,0 +1,95 @@
+﻿
+2016.01.14 13:00:10
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/chartlist/ProjectSB.aspx?treeid=70
+	错误信息：未能加载类型“web.ProjectSB”。
+	错误源：System.Web
+	异常方法：System.Type GetType(System.String, Boolean, Boolean)
+	堆栈信息：   在 System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2016.01.14 13:02:16
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ProjectSBList.aspx?treeid=70
+	错误信息：文件“/Control/ProjectSBList.aspx”不存在。
+	错误源：System.Web
+	异常方法：Void CheckVirtualFileExists(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2016.01.14 13:02:34
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/ProjectSBList.aspx?treeid=70
+	错误信息：文件“/Control/ProjectSBList.aspx”不存在。
+	错误源：System.Web
+	异常方法：Void CheckVirtualFileExists(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2016.01.14 16:08:51
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/chartlist/ProjectSB.aspx?treeid=70'
+	错误信息：字符串 '  order by id asc' 后的引号不完整。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.RoleRTree_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\RoleRTree.cs:行号 98
+   在 BLL.RoleRTree.RoleRTree_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\RoleRTree.cs:行号 77
+   在 web.ProjectSB.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\chartlist\ProjectSB.aspx.cs:行号 44
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

@@ -1,0 +1,199 @@
+﻿
+2015.12.04 14:59:59
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/uploadDTLZ.ashx
+	错误信息：列名 'uploadXQQ7215' 无效。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Planner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Planner.cs:行号 193
+   在 BLL.Planner.Planner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Planner.cs:行号 77
+   在 web.api.uploadDTLZ.ProcessRequest(HttpContext context) 位置 c:\Users\admin\Desktop\beixin\Web\api\uploadDTLZ.ashx.cs:行号 46
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.04 15:00:19
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/uploadDTLZ.ashx
+	错误信息：列名 'uploadXQQ7215' 无效。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Planner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Planner.cs:行号 193
+   在 BLL.Planner.Planner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Planner.cs:行号 77
+   在 web.api.uploadDTLZ.ProcessRequest(HttpContext context) 位置 c:\Users\admin\Desktop\beixin\Web\api\uploadDTLZ.ashx.cs:行号 46
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.04 15:03:51
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/uploadDTLZ.ashx
+	错误信息：列名 'uploadXQQ7215' 无效。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Planner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Planner.cs:行号 193
+   在 BLL.Planner.Planner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Planner.cs:行号 77
+   在 web.api.uploadDTLZ.ProcessRequest(HttpContext context) 位置 c:\Users\admin\Desktop\beixin\Web\api\uploadDTLZ.ashx.cs:行号 46
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.04 15:03:53
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/uploadDTLZ.ashx
+	错误信息：列名 'uploadXQQ7215' 无效。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Planner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Planner.cs:行号 193
+   在 BLL.Planner.Planner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Planner.cs:行号 77
+   在 web.api.uploadDTLZ.ProcessRequest(HttpContext context) 位置 c:\Users\admin\Desktop\beixin\Web\api\uploadDTLZ.ashx.cs:行号 46
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.04 15:06:56
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/uploadDTLZ.ashx
+	错误信息：列名 'uploadXQQ7215' 无效。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Planner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Planner.cs:行号 193
+   在 BLL.Planner.Planner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Planner.cs:行号 77
+   在 web.api.uploadDTLZ.ProcessRequest(HttpContext context) 位置 c:\Users\admin\Desktop\beixin\Web\api\uploadDTLZ.ashx.cs:行号 46
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.04 15:27:48
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/uploadQD.ashx
+	错误信息：INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1292
+   在 Data.DataProviderCms.Planner_GetListArrayBySql(String sql) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Planner.cs:行号 209
+   在 BLL.Planner.Planner_GetListArrayBySql(String sql) 位置 c:\Users\admin\Desktop\beixin\BLL\Planner.cs:行号 81
+   在 web.api.uploadQD.ProcessRequest(HttpContext context) 位置 c:\Users\admin\Desktop\beixin\Web\api\uploadQD.ashx.cs:行号 57
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------

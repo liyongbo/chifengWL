@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="password.html">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+	<ul>
+        <div class="wl_Nnav"><a href="basisinfo -基础信息管理.html">基础信息</a></div>
+        <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html">物流基础信息</a>
+            <ul>
+                <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html" >目的地信息</a></li>
+                <li><a href="basisinfo_wsj-物流基础信息 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_wclxx-物流基础信息 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html">同城基础信息</a>
+            <ul>
+                <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html" >段道信息</a></li>
+                <li><a href="basisinfo_tpsxx-同城基础信息 - 配送信息.html" >配送员信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_ddsf-第三方快递基础.html">第三方快递基础信息</a>
+        	<ul>
+                <li><a href="basisinfo_ddsf-第三方快递基础.html" >快递公司</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="othermail-其他邮件.html">其它邮件</a></div>
+        <div class="wl_Nnav"><a href="logistics_wlist-物流-汇总列表.html">物流信息</a></div>
+        <li>
+        	<ul>
+            	<li><a href="logistics_wlist-物流-汇总列表.html">物流出库汇总列表</a></li>
+                <li><a href="logistics_wdfh-物流-待发货.html">待发货</a></li>
+                <li><a href="logistics_wyfh-物流-已发货.html">已发货</a></li>
+        	</ul>
+        </li>
+        <div class="wl_Nnav"><a href="city_Tlist-同城-汇总列表.html">同城</a></div>
+        <li>
+        	<ul>
+           		<li><a href="city_Tlist-同城-汇总列表.html">同城出库汇总表</a></li>
+        		<li><a href="city_Tdck-同城-待出库.html">待发货</a></li>
+        		<li><a href="city_Tdck-同城-已出库.html">已发货</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="three_Slist-第三方-汇总列表.html">第三方快递</a></div>
+        <li>
+        	<ul>
+                <li><a href="three_Slist-第三方-汇总列表.html">第三方出库汇总列表</a></li>
+                <li><a href="three_Sdfh-第三方-待发货.html">待发货</a></li>
+                <li><a href="three_Syfh-第三方-已发货.html">已发货</a></li>
+       		</ul>
+        </li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">第三方 - 已发货 <b>2016.05.14 <a href="#" ><img src="img/rili.gif" /></a></b></div>
+        <div class="ez_searchTop " style="margin-bottom:20px;">
+        	<input  placeholder="请输入邮件编号或收件人姓名"/>
+            <input type="button" value="搜索" class="ez_btn1"  style="width:75px; height:34px; text-align:center; background:#267cb7; color:#fff;"/>
+        </div>
+        <div class="ez_khtab">
+            <div class="ez_khoper w3"></div>
+            <table class="altrowstable" id="alternatecolor">
+                <tr>
+                    <th>序号</th>
+                    <th>邮件号码</th>
+                    <th>来源</th>
+                    <th>收件人姓名</th>
+                    <th>收件人联系方式</th>
+                    <th>票数</th>
+                    <th>箱数</th>
+                    <th>代收货款</th>
+                    <th>重要提示</th>
+                    <th>收件人签收</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>387573948</td>
+                    <td>二期</td>
+                    <td>王小波</td>
+                    <td>13599887587</td>
+                    <td>1</td>
+                    <td>69</td>
+                    <td>198</td>
+                    <td class="wqs">加急</td>
+                    <td class="yqs">已签收</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>387573948</td>
+                    <td>二期</td>
+                    <td>张敏敏</td>
+                    <td>13599887587</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>150</td>
+                    <td>一般</td>
+                    <td class="yqs">已签收</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>387573948</td>
+                    <td>二期</td>
+                    <td>王小波</td>
+                    <td>13599887587</td>
+                    <td>1</td>
+                    <td>18</td>
+                    <td>168</td>
+                    <td>一般</td>
+                    <td class="yqs">已签收</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>387573948</td>
+                    <td>二期</td>
+                    <td>王小波</td>
+                    <td>13599887587</td>
+                    <td>1</td>
+                    <td>16</td>
+                    <td>145</td>
+                    <td>一般</td>
+                    <td class="yqs">已签收</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>387573948</td>
+                    <td>二期</td>
+                    <td>王小波</td>
+                    <td>13599887587</td>
+                    <td>1</td>
+                    <td>47</td>
+                    <td>198</td>
+                    <td>一般</td>
+                    <td class="wqs">未签收</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>总计</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>5</b></td>
+                    <td><b>155</b></td>
+                    <td><b>859</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+           
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿
+2016.01.10 20:20:38
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2016.01.10 22:13:17
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/shouxu/CX.aspx?treeid=62
+	错误信息：无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+无法绑定由多个部分组成的标识符 "a.areaid"。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1292
+   在 Data.DataProviderCms.ProjectDPM_GetListArrayBySql(String sql) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Project.cs:行号 1233
+   在 BLL.Project.ProjectDPM_GetListArrayBySql(String sql) 位置 c:\Users\admin\Desktop\beixin\BLL\Project.cs:行号 85
+   在 web.shouxu.CX.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\shouxu\CX.aspx.cs:行号 72
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.10 22:27:08
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/shouxu/GuiHua.aspx?treeid=53
+	错误信息：关键字 'where' 附近有语法错误。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1292
+   在 Data.DataProviderCms.ProjectDPM_GetListArrayBySql(String sql) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Project.cs:行号 1233
+   在 BLL.Project.ProjectDPM_GetListArrayBySql(String sql) 位置 c:\Users\admin\Desktop\beixin\BLL\Project.cs:行号 85
+   在 web.shouxu.GuiHua.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\shouxu\GuiHua.aspx.cs:行号 76
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

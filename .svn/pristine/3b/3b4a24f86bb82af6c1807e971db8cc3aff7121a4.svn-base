@@ -1,0 +1,422 @@
+﻿
+2015.12.13 20:56:42
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Boolean TryGetConnection(System.Data.Common.DbConnection, UInt32, Boolean, Boolean, System.Data.Common.DbConnectionOptions, System.Data.ProviderBase.DbConnectionInternal ByRef)
+	堆栈信息：   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:56:42
+.客户信息：
+	Ip:::1
+	浏览器:IE
+	浏览器版本:10
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean)
+	堆栈信息：   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:59:08
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean)
+	堆栈信息：   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:59:16
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Boolean TryGetConnection(System.Data.Common.DbConnection, UInt32, Boolean, Boolean, System.Data.Common.DbConnectionOptions, System.Data.ProviderBase.DbConnectionInternal ByRef)
+	堆栈信息：   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:59:17
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Boolean TryGetConnection(System.Data.Common.DbConnection, UInt32, Boolean, Boolean, System.Data.Common.DbConnectionOptions, System.Data.ProviderBase.DbConnectionInternal ByRef)
+	堆栈信息：   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:59:29
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean)
+	堆栈信息：   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:59:30
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Boolean TryGetConnection(System.Data.Common.DbConnection, UInt32, Boolean, Boolean, System.Data.Common.DbConnectionOptions, System.Data.ProviderBase.DbConnectionInternal ByRef)
+	堆栈信息：   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 20:59:47
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean)
+	堆栈信息：   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 21:04:33
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Index.aspx
+	错误信息：无法打开登录所请求的数据库 "beixin_2015"。登录失败。
+用户 'ertl' 登录失败。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void .ctor(System.Data.ProviderBase.DbConnectionPoolIdentity, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SqlCredential, System.Object, System.String, System.Security.SecureString, Boolean, System.Data.SqlClient.SqlConnectionString, System.Data.SqlClient.SessionData, System.Data.ProviderBase.DbConnectionPool, System.String, Boolean)
+	堆栈信息：   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.Branner_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\Branner.cs:行号 98
+   在 BLL.Branner.Branner_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\Branner.cs:行号 77
+   在 web.Index.initBranner() 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 30
+   在 web.Index.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Index.aspx.cs:行号 21
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 22:17:52
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=15&pid=7854
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：App_Web_4dbpore3
+	异常方法：Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+	堆栈信息：   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 134
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 22:18:04
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=15&pid=7854
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：App_Web_4dbpore3
+	异常方法：Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+	堆栈信息：   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 134
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 22:19:37
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=15&pid=7854
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：App_Web_4dbpore3
+	异常方法：Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+	堆栈信息：   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 134
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 22:23:27
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=15&pid=7854
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：App_Web_3q0b1scd
+	异常方法：Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+	堆栈信息：   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 134
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.13 22:27:16
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=15&pid=7854
+	错误信息：'xqconfirmtime' 附近有语法错误。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.OperatorFeedBack_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\OperatorFeedBack.cs:行号 158
+   在 BLL.OperatorFeedBack.OperatorFeedBack_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\OperatorFeedBack.cs:行号 77
+   在 web.Control.oProjectList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx.cs:行号 94
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

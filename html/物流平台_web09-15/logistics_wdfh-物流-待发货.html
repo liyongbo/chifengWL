@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="password.html">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+    <ul>
+        <div class="wl_Nnav"><a href="basisinfo -基础信息管理.html">基础信息</a></div>
+        <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html">物流基础信息</a>
+            <ul>
+                <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html" >目的地信息</a></li>
+                <li><a href="basisinfo_wsj-物流基础信息 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_wclxx-物流基础信息 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html">同城基础信息</a>
+            <ul>
+                <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html" >段道信息</a></li>
+                <li><a href="basisinfo_tpsxx-同城基础信息 - 配送信息.html" >配送员信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_ddsf-第三方快递基础.html">第三方快递基础信息</a>
+        	<ul>
+                <li><a href="basisinfo_ddsf-第三方快递基础.html" >快递公司</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="othermail-其他邮件.html">其它邮件</a></div>
+        <div class="wl_Nnav"><a href="logistics_wlist-物流-汇总列表.html">物流信息</a></div>
+        <li>
+        	<ul>
+            	<li><a href="logistics_wlist-物流-汇总列表.html">物流出库汇总列表</a></li>
+                <li><a href="logistics_wdfh-物流-待发货.html">待发货</a></li>
+                <li><a href="logistics_wyfh-物流-已发货.html">已发货</a></li>
+        	</ul>
+        </li>
+        <div class="wl_Nnav"><a href="city_Tlist-同城-汇总列表.html">同城</a></div>
+        <li>
+        	<ul>
+           		<li><a href="city_Tlist-同城-汇总列表.html">同城出库汇总表</a></li>
+        		<li><a href="city_Tdck-同城-待出库.html">待发货</a></li>
+        		<li><a href="city_Tdck-同城-已出库.html">已发货</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="three_Slist-第三方-汇总列表.html">第三方快递</a></div>
+        <li>
+        	<ul>
+                <li><a href="three_Slist-第三方-汇总列表.html">第三方出库汇总列表</a></li>
+                <li><a href="three_Sdfh-第三方-待发货.html">待发货</a></li>
+                <li><a href="three_Syfh-第三方-已发货.html">已发货</a></li>
+       		</ul>
+        </li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">待发货 <b>2016.05.14 <a href="#" ><img src="img/rili.gif" /></a></b></div>
+        <div class="ez_Search">
+            目的地：
+            <select class="ez_input1" style="width:179px;height:35px;">
+                <option>请选择</option>
+                <option>恩志物流一期</option>
+                <option>散户</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>锡林浩特</option>
+                <option>西乌旗</option>
+            </select>
+            车主姓名：
+            <select class="ez_input1" style="width:179px;height:35px;">
+                <option>请选择</option>
+                <option>赵恩志</option>
+                <option>散户</option>
+                <option>孙琦</option>
+                <option>张建军</option>
+                <option>王小虎</option>
+                <option>李爱国</option>
+                <option>张晓敏</option>
+            </select>
+            联系方式：
+            <input type="email" class="ez_input1" id="" placeholder="" >
+        </div>
+        <div class="ez_Search">
+            司&nbsp;&nbsp;&nbsp;机：
+            <select class="ez_input1" style="width:179px;height:35px;">
+                <option>请选择</option>
+                <option>王晓东</option>
+                <option>李晓明</option>
+                <option>郭大庆</option>
+            </select>
+            联系方式：<input type="email" class="ez_input1" id="" placeholder="">
+            身份证号：<input type="email" class="ez_input1" id="" placeholder="" >
+        </div>
+        <div class="ez_Search">
+            车牌号：
+            <select class="ez_input1" style="width:179px;height:35px;">
+                <option>请选择</option>
+                <option>京L53710</option>
+                <option>蒙D86358</option>
+                <option>蒙D85625</option>
+            </select>
+            车辆类型：<input type="email" class="ez_input1" id="" placeholder="" >
+            车架号码：<input type="email" class="ez_input1" id="" placeholder="">
+            <button type="submit" class="ez_btn1" style="width:75px;">确定</button>
+        </div>
+        <div class="ez_khtab">
+            <div class="ez_khoper w3"><button type="submit" class="ez_btn1" style="width:75px;">打印</button></div>
+            <table class="altrowstable" id="alternatecolor">
+                <tr>
+                    <th>序号</th>
+                    <th>邮件号码</th>
+                    <th>出库单号</th>
+                    <th>来源</th>
+                    <th>收件人姓名</th>
+                    <th>收件人联系方式</th>
+                    <th>票数</th>
+                    <th>箱数</th>
+                    <th>代收货款</th>
+                    <th>重要提示</th>
+                    <th>收件人签收</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>39875155</td>
+                    <td>Q2016051285698</td>
+                    <td>三期</td>
+                    <td>王晓晓</td>
+                    <td>13800138000</td>
+                    <td>1</td>
+                    <td>20</td>
+                    <td>30000</td>
+                    <td class="wqs">加急</td>
+                    <td></td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>39875156</td>
+                    <td>Q2016051285699</td>
+                    <td>三期</td>
+                    <td>王晓晓</td>
+                    <td>13800138000</td>
+                    <td>1</td>
+                    <td>20</td>
+                    <td>30000</td>
+                    <td>一般</td>
+                    <td></td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>39875157</td>
+                    <td>Q2016051285700</td>
+                    <td>三期</td>
+                    <td>王晓晓</td>
+                    <td>13800138000</td>
+                    <td>1</td>
+                    <td>20</td>
+                    <td>30000</td>
+                    <td>一般</td>
+                    <td></td>
+                    <td>无</td>
+                </tr>
+                
+            </table>
+            <div class="wl_qz wl_bag">
+            	<span class="one">时间：</span>
+                <span class="one">司机签字：</span>
+                <span class="one">物流主管签字：</span>       
+            </div>
+            <div class="ez_khoper w3" style="text-align:center; width:100%; margin-top:20px; text-align:center;">
+            	<button type="submit" class="ez_btn1" style="width:300px; height:50px;">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ConfigsInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Years>2013,2014,2015,2016,2017,2018,2019,2020</Years>
+  <INDEXIMG>/UploadFile/2016040405091775.jpg</INDEXIMG>
+  <YZM>false</YZM>
+  <UploadSize>1024000</UploadSize>
+  <IsOpenPickproofLinkOfPic>true</IsOpenPickproofLinkOfPic>
+  <PickproofLinkPreOfPic>.gif,.png,.jpg</PickproofLinkPreOfPic>
+  <IsOpenPickproofLinkOfFile>false</IsOpenPickproofLinkOfFile>
+  <PickproofLinkPreOfFile>.rar,.zip,.exe</PickproofLinkPreOfFile>
+  <WebServiceRequestModel>1</WebServiceRequestModel>
+  <WebServiceSafeCode>WGErtl</WebServiceSafeCode>
+  <WebServiceIPList />
+  <UserlevaNoCheck>
+    <string>1</string>
+    <string>2</string>
+    <string>3</string>
+    <string>4</string>
+    <string>5</string>
+    <string>6</string>
+    <string>7</string>
+  </UserlevaNoCheck>
+  <UserlevaUpload>
+    <string>1</string>
+    <string>2</string>
+    <string>3</string>
+    <string>4</string>
+    <string>5</string>
+    <string>6</string>
+    <string>7</string>
+  </UserlevaUpload>
+  <PostTimeOut>0</PostTimeOut>
+  <Culture>Auto</Culture>
+  <IsOpenSql>false</IsOpenSql>
+  <EncryptionKey>ertl973100017</EncryptionKey>
+  <DisableAutoUpdatePlugin>false</DisableAutoUpdatePlugin>
+  <PassType>MD5</PassType>
+  <LoginExpires>600</LoginExpires>
+  <IsOpenUserHome>false</IsOpenUserHome>
+  <IsErrFriend>false</IsErrFriend>
+  <IsOpenAppLog>false</IsOpenAppLog>
+  <IsOpenAdminLoginLog>false</IsOpenAdminLoginLog>
+  <ErrLoginNum>5</ErrLoginNum>
+  <IsOpenSafeCoder>false</IsOpenSafeCoder>
+  <IsOpenSafeCoder_PL>false</IsOpenSafeCoder_PL>
+  <AuditingComment>false</AuditingComment>
+  <AuditingContent>false</AuditingContent>
+  <IsUpdateHisCookieOrSession>0</IsUpdateHisCookieOrSession>
+  <HitsUpdateTimeLength>30</HitsUpdateTimeLength>
+  <CookieDomain>101.200.85.2</CookieDomain>
+  <CookieDomainAdmin>adminback.csae-info.org</CookieDomainAdmin>
+  <UserPath>md/</UserPath>
+  <MaxThreadForPool>10</MaxThreadForPool>
+  <AdminPath>AdminHt/</AdminPath>
+  <IISPath>/</IISPath>
+  <AllowUpType>.jpg,.png,.xls,.txt</AllowUpType>
+  <IsMEssageWriting>false</IsMEssageWriting>
+  <IsEndDataBaseStr>false</IsEndDataBaseStr>
+  <IsOpen404Log>false</IsOpen404Log>
+  <Copyright>Copyright &amp;copy; 2005 - 2011 Tencent. All Rights Reserved 北京新龙嘉盛科技有限公司 &lt;a href="" target="_blank"&gt;版权所有&lt;/a&gt;</Copyright>
+  <IsAllowApplyFrdLink>true</IsAllowApplyFrdLink>
+  <FrdLinkDemo>&lt;p&gt;友情链接 联系QQ：369913836&lt;/p&gt;</FrdLinkDemo>
+  <sMapPath>E:\work\beimai5.0\Web\BeiMai.UI\</sMapPath>
+  <DomainName>csae-info.org</DomainName>
+  <UploadPath>UploadFile</UploadPath>
+  <MainServer />
+  <SearchUrl />
+  <LtUrl />
+  <CssUrl />
+  <WyUrl />
+  <HyUrl />
+  <AdminBackUrl />
+  <FileServer />
+  <EmailSendPlugin>BeiMai.Plugin.Email.SysEmail</EmailSendPlugin>
+  <MobileMsgSendPlugin>BeiMai.Plugin.MobileMsgSendBeiMai.Winic</MobileMsgSendPlugin>
+  <CacheBll />
+  <IsAddSearchKeyword>true</IsAddSearchKeyword>
+  <DelModuleAndFile>false</DelModuleAndFile>
+  <IsCacheJsCss>false</IsCacheJsCss>
+  <IpToAreaPluginName>BeiMai.Plugin.IPToArea.SinaApi</IpToAreaPluginName>
+  <KuaiDiPluginName>BeiMai.Plugin.Delivery.KuaiDi100</KuaiDiPluginName>
+  <EnableHttpCompression>false</EnableHttpCompression>
+  <EnableCssCompression>0</EnableCssCompression>
+  <EnableJsCompression>2</EnableJsCompression>
+  <MEnableJsCompression>1</MEnableJsCompression>
+  <ProductSolrApiUrl />
+</ConfigsInfo>

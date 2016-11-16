@@ -1,0 +1,21 @@
+﻿
+2016.05.09 12:03:53
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/Control/ProjectO.aspx?treeid=58
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.ProjectO.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\ProjectO.aspx.cs:行号 148
+   在 web.Control.ProjectO.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\ProjectO.aspx.cs:行号 169
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

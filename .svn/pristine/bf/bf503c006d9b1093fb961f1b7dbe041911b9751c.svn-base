@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Web;
+
+namespace BLL.Base.Page
+{
+    public class UserPage : BasePage
+    {
+
+
+
+        /// <summary>
+        /// 下载文件
+        /// </summary>
+        /// <param name="serverfilpath"></param>
+        /// <param name="filename"></param>
+        public void ToDownload(byte[] serverfilpath, string filename)
+        {
+            MemoryStream fileStream = new MemoryStream(serverfilpath);
+            long fileSize = fileStream.Length;
+            HttpContext.Current.Response.ContentType = "application/octet-stream";
+            Response.AddHeader("Content-Disposition", "attachment;filename=" + Server.UrlEncode(filename));
+            HttpContext.Current.Response.AddHeader("Content-Length", fileSize.ToString());
+            Response.ContentType = "application/ms-excel";
+            fileStream.Read(serverfilpath, 0, (int)fileSize);
+            HttpContext.Current.Response.BinaryWrite(serverfilpath);
+            fileStream.Close();
+            HttpContext.Current.Response.End();
+        }
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public UserPage()
+        {
+            this.Load += new EventHandler(this.UserPage_Load);
+        }
+        /// <summary>
+        /// LOAD事件处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void UserPage_Load(object sender, EventArgs e)
+        {
+            //验证当前用户是否已经登录(帐号+密码),如果还未登录，跳转到登录页面
+            CheckFrontUserIsLogin();
+        }
+
+
+      
+
+     
+
+
+        public void initData()
+        {
+           
+        }
+
+   
+    }
+}

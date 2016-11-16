@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="password.html">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+    <ul>
+        <div class="wl_Nnav"><a href="basisinfo -基础信息管理.html">基础信息</a></div>
+        <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html">物流基础信息</a>
+            <ul>
+                <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html" >目的地信息</a></li>
+                <li><a href="basisinfo_wsj-物流基础信息 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_wclxx-物流基础信息 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html">同城基础信息</a>
+            <ul>
+                <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html" >段道信息</a></li>
+                <li><a href="basisinfo_tpsxx-同城基础信息 - 配送信息.html" >配送员信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_ddsf-第三方快递基础.html">第三方快递基础信息</a>
+        	<ul>
+                <li><a href="basisinfo_ddsf-第三方快递基础.html" >快递公司</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="othermail-其他邮件.html">其它邮件</a></div>
+        <div class="wl_Nnav"><a href="logistics_wlist-物流-汇总列表.html">物流信息</a></div>
+        <li>
+        	<ul>
+            	<li><a href="logistics_wlist-物流-汇总列表.html">物流出库汇总列表</a></li>
+                <li><a href="logistics_wdfh-物流-待发货.html">待发货</a></li>
+                <li><a href="logistics_wyfh-物流-已发货.html">已发货</a></li>
+        	</ul>
+        </li>
+        <div class="wl_Nnav"><a href="city_Tlist-同城-汇总列表.html">同城</a></div>
+        <li>
+        	<ul>
+           		<li><a href="city_Tlist-同城-汇总列表.html">同城出库汇总表</a></li>
+        		<li><a href="city_Tdck-同城-待出库.html">待发货</a></li>
+        		<li><a href="city_Tdck-同城-已出库.html">已发货</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="three_Slist-第三方-汇总列表.html">第三方快递</a></div>
+        <li>
+        	<ul>
+                <li><a href="three_Slist-第三方-汇总列表.html">第三方出库汇总列表</a></li>
+                <li><a href="three_Sdfh-第三方-待发货.html">待发货</a></li>
+                <li><a href="three_Syfh-第三方-已发货.html">已发货</a></li>
+       		</ul>
+        </li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">新增其它邮件</div>
+        <div class="ez_khtab">
+            <div class="ez_khoper w3"><input type="button" class="ez_btn1" value="返回" onclick="javascript:location.href='othermail-其他邮件.html'" style="width:75px;"></div>
+            
+            <div class="ez_NweCust">
+            	<ul>
+                    <li><span class="left1">邮件编号：</span><input type="email" class="ez_input1 w" id="" value="Q16081800014"></li>
+                    <li><p>有快递单号，邮件编号为快递单号，没有快递单号，编码规格为(Q+日期+四位流水号)</p></li>
+                    <li>
+                        <span class="left1">目的地：</span>
+                        <select class="ez_input1" style="width:200px;height:42px;">
+                            <option>请选择</option>
+                            <option>北京</option>
+                            <option>上海</option>
+                            <option>石家庄</option>
+                        </select>
+                    </li>
+                    <li><span class="left1">件数：</span>
+                        <input type="email" class="ez_input1 w" id="" placeholder="件数" style="width:50px;">
+                        <span class="left1" style="width:50px;">种类：</span>
+                        <select class="ez_input1" style="width:100px; height:42px;">
+                            <option>请选择</option>
+                            <option>小箱</option>
+                            <option>中箱</option>
+                            <option>大箱</option>
+                            <option>超大箱</option>
+                        </select>
+                        <span class="left1" style="width:50px;">运费：</span>
+                        <input type="email" class="ez_input1 w" id="" placeholder="0.00" style="width:50px;">
+                        <input type="submit" class="ez_btn1" value="增加" style="width:80px; height:42px;">
+                     </li>
+                     <li><span class="left1">件数：</span>
+                        <input type="email" class="ez_input1 w" id="" placeholder="件数" style="width:50px;">
+                        <span class="left1" style="width:50px;">种类：</span>
+                        <select class="ez_input1" style="width:100px; height:42px;">
+                            <option>请选择</option>
+                            <option>小箱</option>
+                            <option>中箱</option>
+                            <option>大箱</option>
+                            <option>超大箱</option>
+                        </select>
+                        <span class="left1" style="width:50px;">运费：</span>
+                        <input type="email" class="ez_input1 w" id="" placeholder="0.00" style="width:50px;">
+                        
+                     </li>
+                   	<li><span class="left1">收件人：</span><input type="email" class="ez_input1 w" id="" placeholder=""></li>
+                    <li><span class="left1">电话：</span><input type="email" class="ez_input1 w" id="" placeholder=""></li>
+                    <li><span class="left1">地址：</span><input type="email" class="ez_input1 w" id="" placeholder="" /></li>
+                    <li><span class="left1">贷收货款：</span><input type="email" class="ez_input1 w" id="" placeholder=""></li>
+                    <li><span class="left1">来源：</span>
+                    	<select class="ez_input1" style="width:329px; height:42px;">
+                            <option>请选择</option>
+                            <option>赵恩志</option>
+                            <option>孙琦</option>
+                            <option>张建军</option>
+                            <option>王小虎</option>
+                            <option>李爱国</option>
+                            <option>张晓敏</option>
+                            <option>散户</option>
+                        </select></li>
+                    <li><span class="left1"></span><input type="email" class="ez_input1 w" id="" placeholder="来源为散户，请输入联系人和联系方式"></li>
+                    <li><span class="left1"></span><b style="color:#f00; font-size:20px;">金额总计：￥400</b></li>
+                    <li><span class="left1"></span><input type="button" value="提交" class="ez_input1 w" style="width:330px; background:#267cb7;color:#fff; cursor:pointer" ></li>
+                </ul>
+          
+        	</div>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

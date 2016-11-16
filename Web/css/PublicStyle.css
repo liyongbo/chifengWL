@@ -1,0 +1,45 @@
+@charset "gb2312";
+/* CSS Document */
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,th,img,dl,dt,dd{margin:0;padding:0;border:0;}
+select,input{font-size:12px;}
+textarea,td,div,input,p{font-size:12px;}
+body{font-size:12px; font-family:"Microsoft Yahei","Lantinghei SC","Verdana","Hiragino Sans GB","Helvetica,arial","\5b8b\4f53","sans-serif";}
+body,html{hegiht:100%;}
+ul,ol{list-style:none;}
+div{margin:0; padding:0;}
+input{border:none; margin:0; padding:0; border:none; margin:0; padding:0; font-size:12px;font-family:"Microsoft Yahei","Lantinghei SC","Verdana","Hiragino Sans GB","Helvetica,arial","\5b8b\4f53","sans-serif"; outline:none;}
+.clear{clear:both; height:0; font-size:1px; line-height: 0px;}
+
+/*只适用于非IE浏览器*/
+.clearfix:after {clear:both; height:0; overflow:hidden; display:block; visibility:hidden; content:"."; }
+* html .clearfix{ height:1%};
+*+html .clearfix{ height:1%};
+
+li{list-style-type:none;}
+table{ margin:0 auto;}
+
+/*解决IE6图片下方有空隙产生*/
+img{vertical-align:top;border:none;}
+
+a{color:#444; text-decoration:none;}
+a:hover {color:#267cb7;}
+
+/*英文强制换行*/
+.word{word-break:break-all;}
+
+
+/*清除IOS样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+
+-webkit-appearance: none;
+
+}
+
+
+input[type=button]{
+	-webkit-appearance:none;
+	outline:none
+}
+
+

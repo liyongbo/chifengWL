@@ -1,0 +1,477 @@
+﻿
+2015.12.28 13:20:39
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/ShuLiProjectOprate.aspx?treeid=66?treeid=66
+	错误信息：'?' 附近有语法错误。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.RoleRTree_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\RoleRTree.cs:行号 98
+   在 BLL.RoleRTree.RoleRTree_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\RoleRTree.cs:行号 77
+   在 web.ShuLiProjectOprate.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\ShuLi\ShuLiProjectOprate.aspx.cs:行号 44
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.28 13:20:55
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/ShuLiProjectOprate.aspx?treeid=66?treeid=66
+	错误信息：'?' 附近有语法错误。
+	错误源：.Net SqlClient Data Provider
+	异常方法：Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+	堆栈信息：   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(DbConnection connection, DbTransaction transaction, CommandType commandType, String commandText, DbParameter[] commandParameters, DbConnectionOwnership connectionOwnership) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1214
+   在 Data.DataProfile.DbHelperBase.ExecuteReader(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 c:\Users\admin\Desktop\beixin\Data\DataProfile\DbHelperBase.cs:行号 1343
+   在 Data.DataProviderCms.getDataReader(String tablename, String strGetFields, String fldName, Int32 topSize, Boolean OrderType, String strWhere) 位置 c:\Users\admin\Desktop\beixin\Data\Data\ProviderCms.cs:行号 107
+   在 Data.DataProviderCms.RoleRTree_GetListArray(String strWhere, Int32 iTop, String OrderBy, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\Data\Data\RoleRTree.cs:行号 98
+   在 BLL.RoleRTree.RoleRTree_GetListArray(String strWhere, Int32 top, String orderby, Boolean ascORdesc) 位置 c:\Users\admin\Desktop\beixin\BLL\RoleRTree.cs:行号 77
+   在 web.ShuLiProjectOprate.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\ShuLi\ShuLiProjectOprate.aspx.cs:行号 44
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:50:54
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProjectO.aspx?treeid=55
+	错误信息：文件“/ShuLi/LightProjectO.aspx”不存在。
+	错误源：System.Web
+	异常方法：Void CheckVirtualFileExists(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:51:38
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProjectO.aspx?treeid=55
+	错误信息：文件“/ShuLi/LightProjectO.aspx”不存在。
+	错误源：System.Web
+	异常方法：Void CheckVirtualFileExists(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:51:56
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProjectO.aspx?treeid=55
+	错误信息：文件“/ShuLi/LightProjectO.aspx”不存在。
+	错误源：System.Web
+	异常方法：Void CheckVirtualFileExists(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:52:49
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：未能加载类型“web.LightList”。
+	错误源：System.Web
+	异常方法：System.Type GetType(System.String, Boolean, Boolean)
+	堆栈信息：   在 System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:52:53
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：未能加载类型“web.LightList”。
+	错误源：System.Web
+	异常方法：System.Type GetType(System.String, Boolean, Boolean)
+	堆栈信息：   在 System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:53:05
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:53:19
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:53:45
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:53:47
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:55:20
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:55:20
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 14:55:21
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/LightProject.aspx?treeid=55
+	错误信息：“web.LightList”不扩展类“System.Web.UI.Page”，因此此处不允许。
+	错误源：System.Web
+	异常方法：Void ProcessError(System.String)
+	堆栈信息：   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:03:04
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:21:42
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:22:01
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:23:22
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:25:00
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:27:22
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:27:25
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 15:28:18
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/api/ws.asmx/getLightListLineByID
+	错误信息：未知 Web 方法 getLightListLineByID。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.28 20:23:28
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/PowerList.aspx?treeid=56
+	错误信息：值不能为 null。
+参数名: source
+	错误源：System.Core
+	异常方法：System.Collections.Generic.IEnumerable`1[TSource] Where[TSource](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,System.Boolean])
+	堆栈信息：   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 ASP.shuli_powerlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\ShuLi\PowerList.aspx:行号 73
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.28 20:28:00
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/ShuLi/PowerList.aspx?treeid=56
+	错误信息：值不能为 null。
+参数名: source
+	错误源：System.Core
+	异常方法：System.Collections.Generic.IEnumerable`1[TSource] Where[TSource](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,System.Boolean])
+	堆栈信息：   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 ASP.shuli_powerlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\ShuLi\PowerList.aspx:行号 73
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

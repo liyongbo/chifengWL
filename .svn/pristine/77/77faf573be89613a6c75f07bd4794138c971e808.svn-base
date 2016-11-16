@@ -1,0 +1,131 @@
+﻿
+2015.12.24 00:48:59
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/LuZhengProjectList.aspx?treeid=49
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2015.12.24 11:06:27
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/tongji/GcjinduTj.aspx?treeid=64
+	错误信息：c:\Users\admin\Desktop\beixin\Web\tongji\GcjinduTj.aspx(22): error CS0103: 当前上下文中不存在名称“listTree”
+	错误源：System.Web
+	异常方法：System.Web.Compilation.BuildResult CompileWebFile(System.Web.VirtualPath)
+	堆栈信息：   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2015.12.24 12:03:46
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/ManProjectList.aspx?kw=&areaid=undefined&treeid=16
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2015.12.24 14:16:44
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/GcjdList.aspx?treeid=64
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.GcjdList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\GcjdList.aspx.cs:行号 148
+   在 web.Control.GcjdList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\GcjdList.aspx.cs:行号 170
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.24 15:21:50
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/tongji/GcjinduTj.aspx?treeid=64
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2015.12.24 15:39:50
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/GcjdList.aspx?kw=&areaid=undefined&sttime=undefined&endtime=&treeid=64
+	错误信息：该字符串未被识别为有效的 DateTime。有一个未知单词(从索引 0 处开始)。
+	错误源：mscorlib
+	异常方法：System.DateTime Parse(System.String, System.Globalization.DateTimeFormatInfo, System.Globalization.DateTimeStyles)
+	堆栈信息：   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value)
+   在 web.Control.GcjdList.<Page_Load>b__6(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\GcjdList.aspx.cs:行号 116
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.GcjdList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\GcjdList.aspx.cs:行号 116
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2015.12.24 15:41:28
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/control/GcjdList.aspx?kw=&areaid=undefined&sttime=undefined&endtime=&treeid=64
+	错误信息：该字符串未被识别为有效的 DateTime。有一个未知单词(从索引 0 处开始)。
+	错误源：mscorlib
+	异常方法：System.DateTime Parse(System.String, System.Globalization.DateTimeFormatInfo, System.Globalization.DateTimeStyles)
+	堆栈信息：   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value)
+   在 web.Control.GcjdList.<Page_Load>b__6(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\GcjdList.aspx.cs:行号 116
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 web.Control.GcjdList.Page_Load(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\GcjdList.aspx.cs:行号 116
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.EventHandler.Invoke(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 BLL.Base.Page.BasePage.OnLoad(EventArgs e) 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\BasePage.cs:行号 81
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

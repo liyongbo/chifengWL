@@ -1,0 +1,151 @@
+﻿using BLL.Base;
+using Entity;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using System.Linq;
+using System;
+using System.Web;
+namespace BLL
+{
+
+    public class Users
+    {
+        private const string cacheclass = "Users";
+        static Users()
+        {
+        }
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        static public long Add(Entity.Users model)
+        {
+
+            long cid = Host.Instance.DALCMS.Users_Add(model);
+            if (cid > 0)
+            {
+                return cid;
+            }
+            else
+            {
+                return -1;
+            }
+
+        }
+
+
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        static public void Update(Entity.Users model)
+        {
+            Host.Instance.DALCMS.Users_Update(model);
+            //Host.CacheApp.InvalidateCache(cacheclass);
+        }
+
+
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        static public void Update(string where, string colunm, string value)
+        {
+            Host.Instance.DALCMS.Users_Update(where, colunm, value);
+            //Host.CacheApp.InvalidateCache(cacheclass);
+        }
+
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        static public void Delete(long id)
+        {
+            Host.Instance.DALCMS.Users_Delete(id);
+        }
+        static public void Delete(string ids)
+        {
+            Host.Instance.DALCMS.Users_Deletes(ids);
+        }
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        static public Entity.Users GetModel(string id)
+        {
+            return Host.Instance.DALCMS.Users_GetModel(id); ;
+        }
+
+
+        static public List<Entity.Users> Users_GetListArray(string strWhere, int top, string orderby, bool ascORdesc)
+        {
+            return Host.Instance.DALCMS.Users_GetListArray(strWhere, top, orderby, ascORdesc); ;
+        }
+
+        static public List<Entity.Users> Users_GetListPages(int PageIndex, int PageSize, string strWhere, string oderby, bool ascending, out long rc)
+        {
+            return Host.Instance.DALCMS.Users_GetListPages(PageIndex, PageSize, strWhere, oderby, ascending, out  rc);
+        }
+
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="login_username">用户帐号，或用户email或手机号码，视login_type 而定，0为帐号登录，1为email登录，2为手机号登录</param>
+        /// <param name="login_pwd">密码</param>
+        /// <param name="login_yzm">验证码</param>
+        /// <param name="iscookie">是否记住</param>
+        /// <param name="login_type">0为帐号登录，1为email登录，2为手机号登录</param>
+        /// <param name="ls">登录状态</param>
+        /// <param name="sReturnUrl">登录成功后返回地址</param>
+        /// <param name="IsMD5Pass">密码是否经过加密的</param>
+        /// <param name="sFromUrl">请求来源地址，用户返回</param>
+        /// <returns></returns>
+        static public Entity.Users Login(string login_username, string login_pwd, out LoginStatus ls, out string sReturnUrl)
+        {
+            sReturnUrl = string.Empty;
+            if (BLL.UserIdentity.IsOverErrLoginNum())
+            {
+                ls = LoginStatus.错误登录次数超出规定;
+                return null;
+            }
+           
+            Entity.Users ucf = null;
+
+
+            string sPass = UserIdentity.PassWordEncode(login_pwd);
+
+            bool HaveUser = false;
+
+            List<Entity.Users> user = Host.Instance.DALCMS.Users_GetListArray(string.Format("[username]='{0}' and [userpassword]='{1}'", Tools.GetString.NoHTML(login_username.Trim()), sPass), 1, "[id]", true);
+            if (user != null && user.Count > 0)
+            {
+                HaveUser = true;
+            }
+
+            if (HaveUser)
+            {
+                ucf = user.FirstOrDefault();
+                int CookieExpiresTime = 1800; //1800分钟后过期 一天时间24小时
+                Host.Instance.WriteUserIdentity(ucf.id.ToString(), ucf.username, ucf.name, ucf.lastloginip, CookieExpiresTime);
+                ucf.lastloginip = Tools.Utils.GetClientIP();
+                ucf.lastlogintime = DateTime.Now.ToString();
+                Update(ucf);
+                sReturnUrl = Configs.SysConfigs.ConfigsControl.Instance.ReturnUrl;
+            }
+            else
+            {
+                try
+                {
+                    BLL.UserIdentity.AddErrLoginNum();
+                }
+                catch (Exception ex) { 
+                
+                }
+                ls = LoginStatus.不存在此帐号或密码错误;
+                return null;
+            }
+
+
+            ls = LoginStatus.登录成功;
+            return ucf;
+
+        }
+    }
+}

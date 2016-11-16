@@ -1,0 +1,13 @@
+﻿$(function () {
+    //样式名为ghbs的表格隔行变色
+    $.each($(".ghbs").find("tr"), function (index, model) { $(model).css("background-color", (index % 2 == 0 ? "#f9fdff" : "#ffffff")); });
+
+    //下拉文本框
+    $(".xlg").click(function () {
+        var _this = $(this).find("div");
+        $(".xlg").find("div").not(_this).addClass("none");
+        _this.toggleClass("none");
+    });
+    $.each($(".xlg"), function (index, model) { $(this).css("z-index", (999 - index)); });
+
+});

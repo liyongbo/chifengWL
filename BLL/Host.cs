@@ -1,0 +1,556 @@
+﻿using Data;
+using Data.DataProfile;
+using Entity;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Text;
+using System.Web;
+using System.Web.Security;
+using Tools;
+
+
+namespace BLL.Base
+{
+
+
+    /// <summary>
+    /// 添加一些主系统常用数据api
+    /// </summary>
+    public partial class Host
+    {
+        private const string sCookieHeader_User = "beixinhy";
+        private const string sCookieHeader_User2 = "beixinhy2";
+        private const string sCookieHeader_Admin = "ertlBack";
+        private const string sUserIDMark = "uid";//保存用户ID
+        private const string sUfUserIDMark = "uuid";//保存用户ID
+        private const string sUsernameMark = "NAME";//保存用户帐号
+        private const string sUfUsernameMark = "ufNAME";//保存用户帐号
+        private const string sUserNinameMark = "uni";//保存用户昵称
+        private const string sUserPassMark = "pa";//保存用户密码
+        private const string sUserRoleIDMark = "roleid";//保存用户组ID
+        private const string sUserDepartmentIDMark = "pid";//保存部门ID
+        private string UserUploadPath = "/UploadFile"; //上传目录 /upload
+        private string _projectKey = "projectKey";
+        private string _projecttypeKey = "projecttypeKey";
+        private string _roadlevelKey = "roadlevelKey";
+        private string _roadlocationKey = "roadlocationKey";
+        private string _shuliprojectKey = "_shuliprojectKey";
+
+        public string ShuliprojectKey
+        {
+            get { return _shuliprojectKey; }
+            set { _shuliprojectKey = value; }
+        }
+        private string _shuliprojecttypeKey = "_shuliprojecttypeKey";
+
+        public string ShuliprojecttypeKey
+        {
+            get { return _shuliprojecttypeKey; }
+            set { _shuliprojecttypeKey = value; }
+        }
+        private string _shuliroadlevelKey = "_shuliroadlevelKey";
+
+        public string ShuliroadlevelKey
+        {
+            get { return _shuliroadlevelKey; }
+            set { _shuliroadlevelKey = value; }
+        }
+        private string _shuliroadlocationKey = "_shuliroadlocationKey";
+
+        public string ShuliroadlocationKey
+        {
+            get { return _shuliroadlocationKey; }
+            set { _shuliroadlocationKey = value; }
+        }
+
+        #region 电灯
+        private string _LightprojectKey = "_LightprojectKey";
+
+        public string LightprojectKey
+        {
+            get { return _LightprojectKey; }
+            set { _LightprojectKey = value; }
+        }
+        private string _LightprojecttypeKey = "_LightprojecttypeKey";
+
+        public string LightprojecttypeKey
+        {
+            get { return _LightprojecttypeKey; }
+            set { _LightprojecttypeKey = value; }
+        }
+        private string _LightroadlevelKey = "_LightroadlevelKey";
+
+        public string LightroadlevelKey
+        {
+            get { return _LightroadlevelKey; }
+            set { _LightroadlevelKey = value; }
+        }
+        private string _LightroadlocationKey = "_LightroadlocationKey";
+
+        public string LightroadlocationKey
+        {
+            get { return _LightroadlocationKey; }
+            set { _LightroadlocationKey = value; }
+        }
+        #endregion
+
+        #region 电力
+        private string _PowerprojectKey = "_PowerprojectKey";
+
+        public string PowerprojectKey
+        {
+            get { return _PowerprojectKey; }
+            set { _PowerprojectKey = value; }
+        }
+        private string _PowerprojecttypeKey = "_PowerprojecttypeKey";
+
+        public string PowerprojecttypeKey
+        {
+            get { return _PowerprojecttypeKey; }
+            set { _PowerprojecttypeKey = value; }
+        }
+        private string _PowerroadlevelKey = "_PowerroadlevelKey";
+
+        public string PowerroadlevelKey
+        {
+            get { return _PowerroadlevelKey; }
+            set { _PowerroadlevelKey = value; }
+        }
+        private string _PowerroadlocationKey = "_PowerroadlocationKey";
+
+        public string PowerroadlocationKey
+        {
+            get { return _PowerroadlocationKey; }
+            set { _PowerroadlocationKey = value; }
+        }
+        #endregion 
+
+        #region 电车
+        private string _TramprojectKey = "_TramprojectKey";
+
+        public string TramprojectKey
+        {
+            get { return _TramprojectKey; }
+            set { _TramprojectKey = value; }
+        }
+        private string _TramprojecttypeKey = "_TramprojecttypeKey";
+
+        public string TramprojecttypeKey
+        {
+            get { return _TramprojecttypeKey; }
+            set { _TramprojecttypeKey = value; }
+        }
+        private string _TramroadlevelKey = "_TramroadlevelKey";
+
+        public string TramroadlevelKey
+        {
+            get { return _TramroadlevelKey; }
+            set { _TramroadlevelKey = value; }
+        }
+        private string _TramroadlocationKey = "_TramroadlocationKey";
+
+        public string TramroadlocationKey
+        {
+            get { return _TramroadlocationKey; }
+            set { _TramroadlocationKey = value; }
+        }
+
+        #endregion
+
+        private string _areaKey = "areaKey";
+      
+
+        public string RoadlevelKey
+        {
+            get { return _roadlevelKey; }
+            set { _roadlevelKey = value; }
+        }
+       
+
+        public string RoadlocationKey
+        {
+            get { return _roadlocationKey; }
+            set { _roadlocationKey = value; }
+        }
+        
+
+        public string AreaKey
+        {
+            get { return _areaKey; }
+            set { _areaKey = value; }
+        }
+
+        public string ProjecttypeKey
+        {
+            get { return _projecttypeKey; }
+            set { _projecttypeKey = value; }
+        }
+
+        public string ProjectKey
+        {
+            get { return _projectKey; }
+            set { _projectKey = value; }
+        }
+
+        private string _projectgdKey = "projectgdKey";
+
+        public string ProjectgdKey
+        {
+            get { return _projectgdKey; }
+            set { _projectgdKey = value; }
+        }
+
+
+        private string _projectcxKey = "projectcxKey";
+        public string ProjectCXKey
+        {
+            get { return _projectcxKey; }
+            set { _projectcxKey = value; }
+        }
+        private string _projectjsonKey = "projectjsonKey";
+
+        public string ProjectjsonKey
+        {
+            get { return _projectjsonKey; }
+            set { _projectjsonKey = value; }
+        }
+        private string _listTreeKey = "listTreeKey";
+
+        public string ListTreeKey
+        {
+            get { return _listTreeKey; }
+            set { _listTreeKey = value; }
+        }
+        private string _listAreaKey = "listAreaKey";
+
+        public string ListAreaKey
+        {
+            get { return _listAreaKey; }
+            set { _listAreaKey = value; }
+        }
+
+        private static object _SyncRoot = new object();
+
+        public Host()
+        {
+
+            DALCMS = DBFactory.DataAccess.DALCMS();
+
+        }
+        /// <summary>
+        /// 数据层
+        /// </summary>
+        public DataProviderCms DALCMS;
+
+
+        /// <summary>
+        /// 获取或设置 Host 实例对象,将在系统载入时初始化
+        /// </summary>
+        public static readonly Host Instance = new Host();
+
+        #region IHost Members
+
+
+        /// <summary>
+        /// 获取提供者（插件）配置
+        /// </summary>
+        /// <param name="providerTypeName">提供者类型名称</param>
+        /// <returns></returns>
+        public string GetProviderConfiguration(string providerTypeName)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        #endregion
+
+
+        /// <summary>
+        /// 用户退出后，清除用户已经登录的coolie
+        /// </summary>
+        public void SignOutUser()
+        {
+            HttpCookie cookie = new HttpCookie(sCookieHeader_User);
+            cookie.Values.Clear();
+            cookie.Expires = DateTime.Now.AddYears(-1);
+            string cookieDomain = Configs.SysConfigs.ConfigsControl.Instance.CookieDomain.Trim();
+            if (cookieDomain != string.Empty && HttpContext.Current.Request.Url.Host.IndexOf(cookieDomain) > -1 && Validate.IsValidDomain(HttpContext.Current.Request.Url.Host))
+                cookie.Domain = cookieDomain;
+            HttpContext.Current.Response.AppendCookie(cookie);
+        }
+
+        /// <summary>
+        /// 用户退出后，清除用户已经登录的coolie
+        /// </summary>
+        public void SignOutAdmin()
+        {
+            HttpCookie cookie = new HttpCookie(sCookieHeader_Admin);
+            cookie.Values.Clear();
+            cookie.Expires = DateTime.Now.AddYears(-1);
+            string cookieDomain = Configs.SysConfigs.ConfigsControl.Instance.CookieDomainAdmin.Trim();
+            if (cookieDomain != string.Empty && HttpContext.Current.Request.Url.Host.IndexOf(cookieDomain) > -1 && Validate.IsValidDomain(HttpContext.Current.Request.Url.Host))
+                cookie.Domain = cookieDomain;
+            HttpContext.Current.Response.AppendCookie(cookie);
+        }
+        public void WriteUserIdentityAdmin(string UserID, string UserName, string UserNiName, string UserPass, int ExpiresTime)
+        {
+            if (!string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(UserNiName) && !string.IsNullOrEmpty(UserPass))
+            {
+
+                HttpCookie cookie = new HttpCookie(sCookieHeader_Admin);
+                cookie.Values[sUserIDMark] = UserID;
+                cookie.Values[sUsernameMark] = UserName;
+                cookie.Values[sUserNinameMark] = Utils.UrlEncode(UserNiName);
+                cookie.Values[sUserPassMark] = Utils.UrlEncode(UserPass);
+                cookie.Values[sUserRoleIDMark] = Utils.UrlEncode(RoleID);
+                
+                //发布时必须注视掉cookie时间
+                cookie.Values["expires"] = ExpiresTime.ToString();
+                cookie.Expires = DateTime.Now.AddMinutes(ExpiresTime);
+
+                string cookieDomain = Configs.SysConfigs.ConfigsControl.Instance.CookieDomainAdmin.Trim();
+                if (!string.IsNullOrEmpty(cookieDomain) && System.Web.HttpContext.Current.Request.Url.Host.IndexOf(cookieDomain) > -1 && Tools.Validate.IsValidDomain(System.Web.HttpContext.Current.Request.Url.Host))
+                {
+                    cookie.Domain = cookieDomain;
+                }
+
+                HttpContext.Current.Response.Cookies.Add(cookie);
+            }
+
+
+        }
+
+        public string exesql(string sql)
+        {
+           return DbHelperCms.Instance.ExecuteScalarToStr(CommandType.Text, sql);
+        }
+        
+        public void WriteUserIdentity(string UserID, string UserName, string UserNiName, string UserPass, int ExpiresTime)
+        {
+            if (!string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(UserNiName))
+            {
+                
+                HttpCookie cookie = new HttpCookie(sCookieHeader_User);
+                cookie.Values[sUserIDMark] = UserID;
+                cookie.Values[sUsernameMark] = UserName;
+                cookie.Values[sUserNinameMark] = Utils.UrlEncode(UserNiName);
+                cookie.Values[sUserPassMark] = Utils.UrlEncode(UserPass);
+                
+                //发布时必须注视掉cookie时间
+                cookie.Values["expires"] = ExpiresTime.ToString();
+                cookie.Expires = DateTime.Now.AddMinutes(ExpiresTime);
+
+                string cookieDomain = Configs.SysConfigs.ConfigsControl.Instance.CookieDomain.Trim();
+                if (!string.IsNullOrEmpty(cookieDomain) && System.Web.HttpContext.Current.Request.Url.Host.IndexOf(cookieDomain) > -1 && Tools.Validate.IsValidDomain(System.Web.HttpContext.Current.Request.Url.Host))
+                {
+                    cookie.Domain = cookieDomain;
+                }
+
+                HttpContext.Current.Response.Cookies.Add(cookie);
+                WriteUserIdentity2(UserID, UserName, UserNiName, UserPass, ExpiresTime);
+            }
+
+
+        }
+        public void WriteUserIdentity2(string UserID, string UserName, string UserNiName, string UserPass, int ExpiresTime)
+        {
+            if (!string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(UserNiName) && !string.IsNullOrEmpty(UserPass))
+            {
+                UserCookieInfo userInfo = new UserCookieInfo();
+                userInfo.pa = UserPass;
+                userInfo.uid = UserID;
+                userInfo.un = UserName;
+                userInfo.uni = UserNiName;
+                string jsonUser = JsonHelper.DataContractJsonSerialize(userInfo);
+                //TODO 加密是最好的
+
+                HttpCookie cookie = new HttpCookie(sCookieHeader_User2, jsonUser);
+                cookie.Expires = DateTime.Now.AddMinutes(ExpiresTime);
+
+                string cookieDomain = Configs.SysConfigs.ConfigsControl.Instance.CookieDomain.Trim();
+                if (!string.IsNullOrEmpty(cookieDomain) && System.Web.HttpContext.Current.Request.Url.Host.IndexOf(cookieDomain) > -1 && Tools.Validate.IsValidDomain(System.Web.HttpContext.Current.Request.Url.Host))
+                {
+                    cookie.Domain = cookieDomain;
+                }
+
+                HttpContext.Current.Response.AppendCookie(cookie);
+                FormsAuthentication.SetAuthCookie(UserName, true);
+            }
+        }
+
+      
+
+        /// <summary>
+        /// 获取当前用户登录的ID
+        /// </summary>
+        public string AdminID
+        {
+            get
+            {
+                string sid = Tools.Utils.GetSingleVlue(sCookieHeader_Admin, sUserIDMark);
+
+                if (!string.IsNullOrEmpty(sid))
+                {
+                    return (sid);
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+      
+
+        /// <summary>
+        /// 获取当前用户登录的ID
+        /// </summary>
+        public int UserID
+        {
+            get
+            {
+                string sid = Tools.Utils.GetSingleVlue(sCookieHeader_User, sUserIDMark);
+
+                return Tools.DataConvert.ToInt32(sid);
+            }
+        }
+
+        /// <summary>
+        /// 弹出框缓存
+        /// </summary>
+        public string LzJgDialogCache
+        {
+            get
+            {
+                return "lzjgDialog";
+            }
+        }
+
+     
+        
+   
+        /// <summary>
+        /// 获取当前用户登录的帐号
+        /// </summary>
+        public string UserName
+        {
+            get
+            {
+                return Tools.Utils.GetSingleVlue(sCookieHeader_User, sUsernameMark);
+            }
+        }
+
+        /// <summary>
+        /// 获取当前用户登录的帐号
+        /// </summary>
+        public string NickName
+        {
+            get
+            {
+                return Tools.Utils.GetSingleVlue(sCookieHeader_User, sUserNinameMark);
+            }
+        }
+        /// <summary>
+        /// 获取当前管理员登录的帐号
+        /// </summary>
+        public string AdminName
+        {
+            get
+            {
+                return Tools.Utils.GetSingleVlue(sCookieHeader_Admin, sUsernameMark);
+            }
+        }
+        /// <summary>
+        /// 获取当前用户登录的RoleID
+        /// </summary>
+        public string RoleID
+        {
+            get
+            {
+                string sid = Tools.Utils.GetSingleVlue(sCookieHeader_User, sUserRoleIDMark);
+
+                if (!string.IsNullOrEmpty(sid))
+                {
+                    return sid;
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+        /// <summary>
+        /// 获取当前用户登录的部门ID
+        /// </summary>
+        public int DepartmentID
+        {
+            get
+            {
+                string sid = Tools.Utils.GetSingleVlue(sCookieHeader_Admin, sUserDepartmentIDMark);
+
+                if (!string.IsNullOrEmpty(sid))
+                {
+                    return int.Parse(sid);
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+        }
+
+
+   
+
+      
+
+        /// <summary>
+        /// 获取用户的头像路径(不包含文件名称)
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <returns></returns>
+        public string GetAvatarPath(int UserID)
+        {
+            string UserName = UserID.ToString();
+            UserName = Utils.FormatUid(UserName);
+
+            string sPath = string.Format("{0}/avatars/{1}/{2}/{3}/{4}/",
+               UserUploadPath, UserName.Substring(0, 3), UserName.Substring(3, 2), UserName.Substring(5, 2), UserName.Substring(7, 2));
+
+            return sPath;
+        }
+        ///// <summary>
+        ///// 获取ebsite的数据库连接串,非用户数据库连接串
+        ///// </summary>
+        //public string GetSysConn
+        //{
+        //    get
+        //    {
+
+        //        return Configs.BaseCinfigs.ConfigsControl.Instance.GetConnectionStringSysCms();
+        //    }
+        //}
+        ///// <summary>
+        ///// 获取ebsite数据库表前缀
+        ///// </summary>
+        //public string GetSysTablePrefix
+        //{
+        //    get
+        //    {
+        //        return Configs.BaseCinfigs.ConfigsControl.Instance.TablePrefix;
+        //    }
+        //}
+
+    }
+
+    public class UserCookieInfo
+    {
+        public string uid { get; set; }
+        public string un { get; set; }
+        public string uni { get; set; }
+        public string pa { get; set; }
+        public string rid { get; set; }
+        public string roleid { get; set; }
+    }
+}

@@ -1,0 +1,292 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+
+namespace BLL.Base.Page
+{
+    public class BasePage : System.Web.UI.Page
+    {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl datacount;
+        protected global::System.Web.UI.WebControls.Literal llFootInfo;
+        public Host HostApi
+        {
+            get
+            {
+                return Host.Instance;
+            }
+        }
+
+        #region 属性
+        protected string[] MasterCacheKeyArray = new string[1];
+        /// <summary>
+        /// 站点名称
+        /// </summary>
+        protected string SiteName
+        {
+            get
+            {
+                return "阳阳";
+            }
+        }
+        /// <summary>
+        /// 站点域名
+        /// </summary>
+        protected string DomainName
+        {
+            get
+            {
+                return AppStartInit.DomainName;
+            }
+        }
+
+        protected int UserID = AppStartInit.UserID;
+        protected string UserName = AppStartInit.UserName;
+
+        /// <summary>
+        /// 网站安装目录
+        /// </summary>
+        protected static string IISPath
+        {
+            get
+            {
+                return AppStartInit.IISPath;
+            }
+        }
+        /// <summary>
+        /// 系统后台存放目录名称
+        /// </summary>
+        protected string AdminPath
+        {
+            get
+            {
+                return AppStartInit.AdminPath;
+            }
+        }
+
+        #endregion
+
+
+        public BasePage()
+        {
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            if (!Page.IsCallback)
+            {
+                AddHeaderPram();
+            }
+
+        }
+        protected string KeepUserState(string sPram)
+        {
+            return string.Format("<script> scountpram='{0}';</script>", sPram);
+        }
+        virtual protected string KeepUserState()
+        {
+            return KeepUserState("");
+        }
+
+        protected override void OnUnload(EventArgs e)
+        {
+
+        }
+
+        protected string SeoTitle;
+        protected string SeoKeyWord;
+        protected string SeoDes;
+
+        protected virtual void AddHeaderPram()
+        {
+            if (!string.IsNullOrEmpty(SeoTitle))
+            {
+                Page.Title = SeoTitle;// string.Concat(SeoTitle, " - Powered by EbSite");
+            }
+            if (!string.IsNullOrEmpty(SeoKeyWord))
+            {
+                SetMeta("keywords", SeoKeyWord);
+            }
+            if (!string.IsNullOrEmpty(SeoDes))
+            {
+                SetMeta("Description", SeoDes);
+            }
+
+           // AddJavaScriptInclude(string.Concat(AppStartInit.IISPath, "js/upload/Upload.js"), "");
+
+        }
+        /// <summary>
+        /// Adds a JavaScript reference to the HTML head tag.
+        /// </summary>
+        public virtual void AddJavaScriptInclude(string url, string ID)
+        {
+            HtmlGenericControl script = new HtmlGenericControl("script");
+            script.Attributes["type"] = "text/javascript";
+            script.Attributes["src"] = url;
+
+            if (!string.IsNullOrEmpty(ID))
+                script.Attributes["id"] = ID;
+
+            Page.Header.Controls.Add(script);
+        }
+
+        /// <summary>
+        /// Adds a JavaScript reference to the HTML head tag.
+        /// </summary>
+        public virtual void AddJavaScripts(string scripttext, string ID)
+        {
+            HtmlGenericControl script = new HtmlGenericControl("script");
+            script.Attributes["type"] = "text/javascript";
+            script.InnerHtml = scripttext;
+
+            if (!string.IsNullOrEmpty(ID))
+                script.Attributes["id"] = ID;
+
+            Page.Header.Controls.Add(script);
+        }
+        public void SetMeta(string Name, string Content)
+        {
+            HtmlMeta hm = new HtmlMeta();
+            hm.Name = Name;
+            hm.Content = Content;
+            Page.Header.Controls.Add(hm);
+
+        }
+
+        /// <summary>
+        /// 初始化一些自定义js,返回值为js存放的相对路径 如 /js/comm.js 系统将会加入到header之间的最后位置
+        /// </summary>
+        protected virtual string[] InitOrtherJavaScript
+        {
+            get
+            {
+                return new string[0];
+            }
+        }
+
+
+        /// <summary>
+        /// 验证当前用户是否已经登录,如果还未登录，跳转到登录页面 控件,页面基类都存在此代码，如果改动要同步改动
+        /// </summary>
+        virtual protected void CheckCurrentUserIsLogin()
+        {
+            if (!CurrentAdminIsLogin)
+            {
+                AppStartInit.AdminerLoginReurl();
+            }
+        }
+
+        virtual protected void CheckFrontUserIsLogin()
+        {
+            if (!CurrentUserIsLogin)
+            {
+                AppStartInit.PassPortLoginReurl();
+            }
+        }
+        protected bool CurrentAdminIsLogin
+        {
+            get
+            {
+                string UserName = AppStartInit.AdminName;
+                bool islogin = false;
+                if (!string.IsNullOrEmpty(UserName))
+                {
+                    //由于cookie里的密码已经加密，所以这里false
+                    islogin = true;
+
+                }
+                return islogin;
+            }
+        }
+        protected bool CurrentUserIsLogin
+        {
+            get
+            {
+                string UserName = AppStartInit.UserName;
+                bool islogin = false;
+                if (!string.IsNullOrEmpty(UserName))
+                {
+                    //由于cookie里的密码已经加密，所以这里false
+                    islogin = true;
+
+                }
+                return islogin;
+            }
+        }
+
+        /// <summary>
+        /// Adds a Stylesheet reference to the HTML head tag.
+        /// </summary>
+        /// <param name="url">The relative URL.</param>
+        public virtual void AddStylesheetInclude(string url)
+        {
+            HtmlLink link = new HtmlLink();
+            link.Attributes["type"] = "text/css";
+            link.Attributes["href"] = url;
+            link.Attributes["rel"] = "stylesheet";
+            Page.Header.Controls.Add(link);
+        }
+
+        protected void Tips(string Title, string Info, string Url)
+        {
+            AppStartInit.TipsPageRender(Title, Info, Url);
+        }
+        //通用
+        protected string GetSeoWord(string Rule, string sTitle)
+        {
+            string sSeo = Rule.Replace("{专题名称}", sTitle).Replace("{站点名称}", SiteName).Replace("{标签名称}", sTitle).Replace("{标签名称}", sTitle);
+            return sSeo;
+        }
+
+        protected string GetCurrentCss(string dataid, string sCurrentClassName, string RequestTagid)
+        {
+            string tagid = HttpContext.Current.Request[RequestTagid];
+            string sCss = "";
+
+            if (string.IsNullOrEmpty(tagid))
+            {
+                tagid = "0";
+
+            }
+            if (Equals(dataid, tagid))
+            {
+                sCss = string.Concat("class='", sCurrentClassName, "'");
+            }
+
+            return sCss;
+        }
+        /// <summary>
+        /// 获取当前内容选中的样式
+        /// </summary>
+        /// <param name="ob">当前内容ID</param>
+        /// <param name="sCurrentClassName">当前样式名称</param>
+        /// <returns></returns>
+        protected string GetCurrentContent(object ob, string sCurrentClassName)
+        {
+            int cid = Tools.Utils.StrToInt(HttpContext.Current.Request["id"], 0);
+            string sCss = "";
+
+            if (!Equals(ob, null))
+            {
+                int ID = int.Parse(ob.ToString());
+
+                if (ID == cid) //先判断当前分类ID
+                {
+                    sCss = sCurrentClassName;
+                }
+            }
+
+            return sCss;
+        }
+
+
+    }
+
+}

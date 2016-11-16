@@ -1,0 +1,23 @@
+﻿
+2016.05.19 18:00:05
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/chartlist/chartcontrol/ProjectCXList.aspx?areaids=&prostate=9999903&planyear=,2016,&roadlevelid=,1,2,&treeid=75
+	错误信息：值不能为 null。
+参数名: source
+	错误源：System.Core
+	异常方法：System.Collections.Generic.IEnumerable`1[TSource] Where[TSource](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,System.Boolean])
+	堆栈信息：   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 ASP.chartlist_chartcontrol_projectcxlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\chartlist\chartcontrol\ProjectCXList.aspx:行号 106
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

@@ -1,0 +1,47 @@
+﻿
+2016.06.21 02:57:37
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/api/ws.asmx/DelColumnByTable
+	错误信息：未知 Web 方法 DelColumnByTable。
+参数名: methodName
+	错误源：System.Web.Extensions
+	异常方法：System.Web.Script.Services.WebServiceMethodData GetMethodData(System.String)
+	堆栈信息：   在 System.Web.Script.Services.WebServiceData.GetMethodData(String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(WebServiceData webServiceData, String methodName)
+   在 System.Web.Script.Services.RestHandler.CreateHandler(HttpContext context)
+   在 System.Web.Script.Services.RestHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.Script.Services.ScriptHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String pathTranslated)
+   在 System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--------------------------------------------------------------------------------------------------
+2016.06.21 12:09:53
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/ProjectOprate.aspx?treeid=58
+	错误信息：指定的网络名不再可用。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------
+2016.06.21 12:10:25
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58777/ProjectOprate.aspx?treeid=58
+	错误信息：找不到网络路径。
+	错误源：
+	异常方法：
+	堆栈信息：
+--------------------------------------------------------------------------------------------------

@@ -1,0 +1,284 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Web;
+using Tools;
+
+namespace BLL.Base
+{
+    public static class AppStartInit
+    {
+       public static string LastErr = string.Empty;
+       public const string ASSEMBLY_VERSION = "3.0.0";
+       public static string IISPath = "/";//BeiMai.Configs.SysConfigs.ConfigsControl.Instance.IISPath; 
+       public static string DomainName = string.Empty; //域名
+       public static string AdminPath = "/adminht/"; //后台目录 /adminht/
+       public static string UserUploadPath = "/UploadFile"; //上传目录 /upload
+       public static List<string> UserRandIco = new List<string>();//没有头像的用户随机头像集合   
+
+       //static public AdminPrincipal CheckAdmin()
+       //{
+       //    AdminPrincipal ap = null;
+
+       //    //如果还没有登录,或不是管理员,定向到登录页
+       //   Entity.EntityAPI.MembershipUserEb mue = BeiMai.BLL.User.MembershipUserEb.Instance.GetEntity(UserName);
+       //    if (mue != null && (BeiMai.BLL.User.MembershipUserEb.Instance.ManagerID(mue.UserName)< 1 || !BeiMai.BLL.User.UserIdentity.IsAdminLogIn()))
+       //    {
+
+       //        //再到管理员表里查看有没有此管理员
+       //        BeiMai.BLL.Base.AppStartInit.AdminerLoginReurl();
+       //    }
+       //    else
+       //    {
+       //        ap = AdminPrincipal.ValidateLogin(UserName);
+       //    }
+       //    return ap;
+       //}
+       #region  常用属性
+       /// <summary>
+       /// 当前访问用户IP
+       /// </summary>
+       public static string CurrentUserIP
+       {
+           get
+           {
+               return Tools.Utils.GetClientIP();
+           }
+       }
+
+       /// <summary>
+       /// 定向到管理员登录页
+       /// </summary>
+       public static void AdminerLoginReurl()
+       {
+           string sReurl = HttpContext.Current.Request.RawUrl;
+           HttpContext.Current.Response.Redirect("~/adminback/Login.aspx" + "?ru=" + sReurl);
+       }
+
+       /// <summary>
+       /// 定向到个人中心登录页
+       /// </summary>
+       public static void PassPortLoginReurl()
+       {
+           string sReurl = HttpContext.Current.Request.RawUrl;
+           HttpContext.Current.Response.Redirect("~/Login.aspx");//"~/Login.aspx" + "?ru=" + sReurl
+       }
+       /// <summary>
+       /// 定向到个人中心登录页
+       /// </summary>
+       public static void PassUFPortLoginReurl()
+       {
+           string sReurl = HttpContext.Current.Request.RawUrl;
+           HttpContext.Current.Response.Redirect("~/UFSystemLogin.aspx" + "?ru=" + sReurl);
+       }
+
+       /// <summary>
+       /// 定向到首页
+       /// </summary>
+       public static void RedirectToIndex()
+       {
+           HttpContext.Current.Response.Redirect(IISPath);
+       }
+
+       /// <summary>
+       /// 获取来路
+       /// </summary>
+       public static string GetReurl
+       {
+           get
+           {
+               return HttpContext.Current.Request["ru"];
+           }
+       }
+
+
+
+      
+       /// <summary>
+       /// 登录后定向到来源页,或用户管理页
+       /// </summary>
+       public static void LoginToReurl()
+       {
+           if (!string.IsNullOrEmpty(GetReurl)) //如果有来源url,将定向到来源页面
+           {
+               HttpContext.Current.Response.Redirect(GetReurl);
+           }
+           else
+           {
+               //HttpContext.Current.Response.Redirect(Base.Host.Instance.UccUrl);
+           }
+       }
+       /// <summary>
+       /// 登录后定向到来源页,或用户 指定默认页
+       /// </summary>
+       public static void LoginToReurl(string ReUrl)
+       {
+           if (!string.IsNullOrEmpty(GetReurl)) //如果有来源url,将定向到来源页面
+           {
+               HttpContext.Current.Response.Redirect(GetReurl);
+           }
+           else
+           {
+               HttpContext.Current.Response.Redirect(ReUrl);
+           }
+       }
+       static public void TipsPageRender(string sTitle, string Msg, string reUrl)
+       {
+           System.Web.HttpContext.Current.Response.Write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+           System.Web.HttpContext.Current.Response.Write("<html xmlns=\"http://www.w3.org/1999/xhtml\" >");
+           System.Web.HttpContext.Current.Response.Write("<head ><title>" + sTitle + "</title>");
+           System.Web.HttpContext.Current.Response.Write("<LINK media=all href=\"" + AppStartInit.AdminPath + "themes/blues/css.css\" type=\"text/css\" rel=\"Stylesheet\" >");
+
+           if (!string.IsNullOrEmpty(reUrl))
+               System.Web.HttpContext.Current.Response.Write("<meta http-equiv=\"refresh\" content=\"3; url=" + reUrl + "\"> ");
+
+
+
+           System.Web.HttpContext.Current.Response.Write("</head><body style=\"text-align:center;text-align: -moz-center !important;padding-top:20px;\">");
+           System.Web.HttpContext.Current.Response.Write("<center><div style='width:50%;' >");
+           System.Web.HttpContext.Current.Response.Write("<div class=\"box-p\">");
+           System.Web.HttpContext.Current.Response.Write("<div  class=\"box-s\">");
+           System.Web.HttpContext.Current.Response.Write("<div class=\"box-title\" >" + sTitle + "</div>");
+           System.Web.HttpContext.Current.Response.Write("<div class=\"box-content\" style=\"padding-left:20px;\" >");
+           System.Web.HttpContext.Current.Response.Write("<br />");
+           //内容
+           System.Web.HttpContext.Current.Response.Write("<li><span style=\"word-wrap:bread-word;word-break:break-all;font-size:11.5px;\">" + Msg + "</span></li>");
+
+           if (!string.IsNullOrEmpty(reUrl))
+           {
+               System.Web.HttpContext.Current.Response.Write("<li>系统3秒钟后自动返回...</li><li><a href='javascript:history.back();'><font color=\"red\">返回上一级</font></a>&nbsp;&nbsp;&nbsp;&nbsp;</li>");
+           }
+           else
+           {
+               System.Web.HttpContext.Current.Response.Write(string.Concat("<br/><li><a href='", IISPath, "'><font color=\"red\">返回网站首页</font></a>&nbsp;&nbsp;&nbsp;&nbsp;</li>"));
+           }
+
+           //if (string.IsNullOrEmpty(reUrl))
+           //{
+           //    System.Web.HttpContext.Current.Response.Write("<li><a href='javascript:history.back();'><font color=\"red\">返回上一级</font></a>&nbsp;&nbsp;&nbsp;&nbsp;</li>");
+
+           //}
+           //else
+           //{
+           //    System.Web.HttpContext.Current.Response.Write("<li>系统3秒钟后自动返回...</li><li><a href='javascript:history.back();'><font color=\"red\">返回上一级</font></a>&nbsp;&nbsp;&nbsp;&nbsp;</li>");
+
+           //}
+           System.Web.HttpContext.Current.Response.Write("</div>");
+           System.Web.HttpContext.Current.Response.Write("</div>");
+           System.Web.HttpContext.Current.Response.Write("</div>");
+           System.Web.HttpContext.Current.Response.Write("</div></center>");
+           System.Web.HttpContext.Current.Response.Write("</body>");
+           System.Web.HttpContext.Current.Response.Write("</html>");
+
+
+           System.Web.HttpContext.Current.Response.End();
+
+       }
+      
+       /// <summary>
+       /// 当前登录的用户名,未登录为空
+       /// </summary>
+       public static string UserName
+       {
+           get
+           {
+               return Host.Instance.UserName;
+           }
+       }
+
+
+       /// <summary>
+       /// 当前登录的管理员用户名,未登录为空
+       /// </summary>
+       public static string AdminName
+       {
+           get
+           {
+               return Host.Instance.AdminName;
+           }
+       }
+
+       /// <summary>
+       /// 当前登录的用户ID,未登录为-1
+       /// </summary>
+       public static string UserID
+       {
+           get
+           {
+
+               return Host.Instance.UserID;
+           }
+       }
+       public static string RoleID
+       {
+           get
+           {
+               return Host.Instance.RoleID;
+           }
+       }
+
+       #endregion
+
+
+       /// <summary>
+       /// 网站启动时招行一些数据初始化操作,需要预先缓存的全局数据可以在这里载入
+       /// </summary>
+       public static void ApplicationStartInitData()
+       {
+           //初始化一些基基础配置
+           Configs.SysConfigs.ConfigsControl.Instance.IISPath = Utils.GetIISPath;
+           Configs.SysConfigs.ConfigsControl.Instance.DomainName = GetString.GetSite();
+           Configs.SysConfigs.ConfigsControl.Instance.sMapPath = AppDomain.CurrentDomain.BaseDirectory;
+           Configs.SysConfigs.ConfigsControl.SaveConfig();
+           InitCustomData();
+       }
+
+       static private string GetTableNameModelClassKey(string TableName,int SiteID)
+        {
+            return string.Concat(TableName.ToLower(), "-site", SiteID);
+        }
+
+       
+
+       public static void InitCustomData()
+       {
+           IISPath = Configs.SysConfigs.ConfigsControl.Instance.IISPath;
+           AdminPath = string.Concat(IISPath, Configs.SysConfigs.ConfigsControl.Instance.AdminPath);
+           DomainName = Configs.SysConfigs.ConfigsControl.Instance.DomainName;
+           string sUpPath = Configs.SysConfigs.ConfigsControl.Instance.UploadPath;
+           
+           //规范上传目录 
+           if (sUpPath.EndsWith("/"))
+               sUpPath = sUpPath.Substring(0, sUpPath.LastIndexOf("/"));
+           if (sUpPath.StartsWith("/"))
+           {
+               UserUploadPath = sUpPath;
+           }
+           else
+           {
+               UserUploadPath = string.Concat(IISPath, sUpPath);
+           }          
+       }
+
+
+       public static void LoadPlugins()
+       {
+
+
+           /*添加新插件类型后要在以下创建列表，及修改相应的
+             Collectors.cs
+            * ProviderLoader.cs
+             * 最后修改 BeiMai.BLL.Plugins.Plugin下的 GetPlugins
+             */
+
+         
+
+          
+
+
+       }
+ 
+    }
+}

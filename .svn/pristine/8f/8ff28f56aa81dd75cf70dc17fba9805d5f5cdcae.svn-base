@@ -1,0 +1,103 @@
+﻿using System;
+
+namespace Entity
+{
+    //Users
+    [Serializable]
+    public class Users
+    {
+
+        /// <summary>
+        /// id
+        /// </summary>		
+        private int _id;
+        public int id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        /// <summary>
+        /// username
+        /// </summary>		
+        private string _username;
+        public string username
+        {
+            get { return _username; }
+            set { _username = value; }
+        }
+        /// <summary>
+        /// upassword
+        /// </summary>		
+        private string _upassword;
+        public string upassword
+        {
+            get { return _upassword; }
+            set { _upassword = value; }
+        }
+        /// <summary>
+        /// tname
+        /// </summary>		
+        private string _tname;
+        public string tname
+        {
+            get { return _tname; }
+            set { _tname = value; }
+        }
+        /// <summary>
+        /// lastlogintime
+        /// </summary>		
+        private string _lastlogintime;
+        public string lastlogintime
+        {
+            get { return _lastlogintime; }
+            set { _lastlogintime = value; }
+        }
+        /// <summary>
+        /// lastloginip
+        /// </summary>		
+        private string _lastloginip;
+        public string lastloginip
+        {
+            get { return _lastloginip; }
+            set { _lastloginip = value; }
+        }
+        /// <summary>
+        /// tel
+        /// </summary>		
+        private string _tel;
+        public string tel
+        {
+            get { return _tel; }
+            set { _tel = value; }
+        }
+        /// <summary>
+        /// roleid
+        /// </summary>		
+        private int _roleid;
+        public int roleid
+        {
+            get { return _roleid; }
+            set { _roleid = value; }
+        }
+        /// <summary>
+        /// rolename
+        /// </summary>		
+        private string _rolename;
+        public string rolename
+        {
+            get { return _rolename; }
+            set { _rolename = value; }
+        }
+        /// <summary>
+        /// createdate
+        /// </summary>		
+        private DateTime _createdate;
+        public DateTime createdate
+        {
+            get { return _createdate; }
+            set { _createdate = value; }
+        }
+
+    }
+}
+

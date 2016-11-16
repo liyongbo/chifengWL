@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ConfigsInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FounderuID>sa</FounderuID>
+  <DataLayerTypeUser>SqlServer</DataLayerTypeUser>
+  <DataLayerType>SqlServer</DataLayerType>
+  <ConnectionStringSysCmsWrite>server=101.200.85.2;database=beixin_2015;uid=sa;pwd=beixin2015</ConnectionStringSysCmsWrite>
+  <ConnectionStringSysCms>server=101.200.85.2;database=beixin_2015;uid=sa;pwd=beixin2015</ConnectionStringSysCms>
+  <ConnectionStringSysUserWrite>server=101.200.85.2;database=beixin_2015;uid=sa;pwd=beixin2015</ConnectionStringSysUserWrite>
+  <ConnectionStringSysUser>server=101.200.85.2;database=beixin_2015;uid=sa;pwd=beixin2015</ConnectionStringSysUser>
+  <ConnectionStringUFSystem>server=192.168.1.110;database=UFSystem;uid=sa;pwd=Sa123</ConnectionStringUFSystem>
+  <ConnectionStringT6>192.168.1.110</ConnectionStringT6>
+  <TablePrefix>JQR_</TablePrefix>
+  <TablePrefixUser>JQR_</TablePrefixUser>
+  <MdbServer>114.241.204.27</MdbServer>
+  <MongoDbName>jiaqiaor</MongoDbName>
+</ConfigsInfo>

@@ -1,0 +1,13 @@
+﻿<div class="top" >
+    <div class="head">
+      <a href="/index.aspx">
+        <div class="logo" style="color: #ffffff;font-size: 32px;font-weight: bold;">
+          北京市架空线入地工程信息管理平台
+        </div>
+      </a>
+        <div class="top2">
+            <div class="jiar"> <a href="" class="swsy">联系我们</a> |<a href="javascript:void(0)" onclick="AddFavorite(window.location.href)" class="swsy"> 加入收藏</a></div>
+            <!--<div class="fuwrx">服务热线：</div>-->
+        </div>
+    </div>
+</div>

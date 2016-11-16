@@ -1,0 +1,448 @@
+﻿using System;
+using System.Collections.Generic;
+using Configs.ConfigsBase;
+using Tools;
+
+namespace Configs.BaseCinfigs
+{
+    public class ConfigsInfo : IConfigInfo
+    {
+        private string _MSMQIp="192.168.0.3";
+        public string MSMQIp
+        {
+            get { return _MSMQIp; }
+            set { _MSMQIp = value; }
+        }
+        /// <summary>
+        /// Redis  主机，可以使用多台Redis数据库来做缓存,用key来区分
+        /// </summary>
+        public List<KeyValuePair<string,string>> RedisHostList { get; set; }
+
+        private string _MdbServer = "192.168.0.3";
+        public string MdbServer
+        {
+            get { return _MdbServer; }
+            set { _MdbServer = value; }
+        }
+
+        private string _MongoDbName = "BeiMaiData";
+        public string MongoDbName
+        {
+            get { return _MongoDbName; }
+            set { _MongoDbName = value; }
+        }
+         
+
+        private int _RedisMaxReadPool = 10;
+        public int RedisMaxReadPool
+        {
+            get { return _RedisMaxReadPool; }
+            set { _RedisMaxReadPool = value; }
+        }
+
+        private int _RedisMaxWritePool = 10;
+        public int RedisMaxWritePool
+        {
+            get { return _RedisMaxWritePool; }
+            set { _RedisMaxWritePool = value; }
+        }
+        private string _ConnectionStringU8;
+        private string _ConnectionStringSysCms;
+        private string _ConnectionStringSysUser;
+        private string _TablePrefix;
+        private string _TablePrefixUser;
+        private string _DataLayerType;
+        private string _FounderuID = "";				// 创始人
+
+        private string _DataLayerTypeUser;
+
+        private string _ConnectionStringUFSystem;
+        /// <summary>
+        /// CMS系统用的数据库连接串
+        /// </summary>
+        public string ConnectionStringUFSystem
+        {
+            get
+            {
+
+                return _ConnectionStringUFSystem;
+
+            }
+            set
+            {
+
+                _ConnectionStringUFSystem = value;
+            }
+        }
+        /// <summary>
+        /// 创始人帐号
+        /// </summary>
+        public string FounderuID
+        {
+            get
+            {
+                return _FounderuID;
+            }
+            set
+            {
+                _FounderuID = value;
+            }
+        }
+        /// <summary>
+        /// 用户数据层程序集名称
+        /// </summary>
+        public string DataLayerTypeUser
+        {
+            get
+            {
+                return _DataLayerTypeUser;
+            }
+            set
+            {
+                _DataLayerTypeUser = value;
+            }
+        }
+        /// <summary>
+        /// 系统数据层程序集名称
+        /// </summary>
+        public string DataLayerType
+        {
+            get
+            {
+                return _DataLayerType;
+            }
+            set
+            {
+                _DataLayerType = value;
+            }
+        }
+        public string GetConnectionStringSysCms()
+        {
+            if (SysConfigs.ConfigsControl.Instance.IsEndDataBaseStr)
+            {
+                string deskey = SysConfigs.ConfigsControl.Instance.EncryptionKey;
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(DES.Decode(_ConnectionStringSysCms, deskey));
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    string conn =  DES.Decode(_ConnectionStringSysCms, deskey);
+                    if (string.IsNullOrEmpty(conn))
+                    {
+                        throw new Exception("调用 EbSite.Base.Configs.BaseCinfigs.ConfigsInfo.GetConnectionStringSysCms()出错，您设置了数据库连接串加密，可是无法正常解密,解决方法:修改ConfigsFile/SysConfig.config里的IsEndDataBaseStr为false。");
+                    }
+                    return conn;
+                }
+            }
+            else
+            {
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(_ConnectionStringSysCms);
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    return _ConnectionStringSysCms;
+                }
+            }
+            
+        }
+
+        public string GetConnectionStringU8()
+        {
+            if (SysConfigs.ConfigsControl.Instance.IsEndDataBaseStr)
+            {
+                string deskey = SysConfigs.ConfigsControl.Instance.EncryptionKey;
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(DES.Decode(_ConnectionStringU8, deskey));
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    string conn = DES.Decode(_ConnectionStringU8, deskey);
+                    if (string.IsNullOrEmpty(conn))
+                    {
+                        throw new Exception("调用 EbSite.Base.Configs.BaseCinfigs.ConfigsInfo.GetConnectionStringSysCms()出错，您设置了数据库连接串加密，可是无法正常解密,解决方法:修改ConfigsFile/SysConfig.config里的IsEndDataBaseStr为false。");
+                    }
+                    return conn;
+                }
+            }
+            else
+            {
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(_ConnectionStringU8);
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    return _ConnectionStringU8;
+                }
+            }
+
+        }
+
+        public string GetConnectionStringUFSystem()
+        {
+            if (SysConfigs.ConfigsControl.Instance.IsEndDataBaseStr)
+            {
+                string deskey = SysConfigs.ConfigsControl.Instance.EncryptionKey;
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(DES.Decode(_ConnectionStringUFSystem, deskey));
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    string conn = DES.Decode(_ConnectionStringUFSystem, deskey);
+                    if (string.IsNullOrEmpty(conn))
+                    {
+                        throw new Exception("调用 EbSite.Base.Configs.BaseCinfigs.ConfigsInfo.GetConnectionStringSysCms()出错，您设置了数据库连接串加密，可是无法正常解密,解决方法:修改ConfigsFile/SysConfig.config里的IsEndDataBaseStr为false。");
+                    }
+                    return conn;
+                }
+            }
+            else
+            {
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(_ConnectionStringUFSystem);
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    return _ConnectionStringUFSystem;
+                }
+            }
+
+        }
+
+        public string GetConnectionStringSysCmsWrite()
+        {
+            if (SysConfigs.ConfigsControl.Instance.IsEndDataBaseStr)
+            {
+                string deskey = Configs.SysConfigs.ConfigsControl.Instance.EncryptionKey;
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(DES.Decode(ConnectionStringSysCmsWrite, deskey));
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    string conn = DES.Decode(ConnectionStringSysCmsWrite, deskey);
+                    if (string.IsNullOrEmpty(conn))
+                    {
+                        throw new Exception("调用 EbSite.Base.Configs.BaseCinfigs.ConfigsInfo.GetConnectionStringSysCms()出错，您设置了数据库连接串加密，可是无法正常解密,解决方法:修改ConfigsFile/SysConfig.config里的IsEndDataBaseStr为false。");
+                    }
+                    return conn;
+                }
+            }
+            else
+            {
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(ConnectionStringSysCmsWrite);
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    return ConnectionStringSysCmsWrite;
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// CMS系统用的数据库连接串
+        /// </summary>
+        public string ConnectionStringSysCmsWrite { get; set; }
+
+        /// <summary>
+        /// CMS系统用的数据库连接串
+        /// </summary>
+        public string ConnectionStringSysCms
+        {
+            get
+            {
+
+                return _ConnectionStringSysCms;
+
+            }
+            set
+            {
+
+                _ConnectionStringSysCms = value;
+            }
+        }
+        
+
+        /// <summary>
+        /// CMS系统用的数据库连接串
+        /// </summary>
+        public string ConnectionStringT6
+        {
+            get
+            {
+
+                return _ConnectionStringU8;
+
+            }
+            set
+            {
+
+                _ConnectionStringU8 = value;
+            }
+        }
+        public string GetConnectionStringSysUser()
+        {
+            if (SysConfigs.ConfigsControl.Instance.IsEndDataBaseStr)
+            {
+                string deskey = SysConfigs.ConfigsControl.Instance.EncryptionKey;
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(DES.Decode(_ConnectionStringSysUser, deskey));
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+
+
+                    string conn = DES.Decode(_ConnectionStringSysUser, deskey);
+                    if (string.IsNullOrEmpty(conn))
+                    {
+                        throw new Exception("调用 EbSite.Base.Configs.BaseCinfigs.ConfigsInfo.GetConnectionStringSysUser()出错，您设置了数据库连接串加密，可是无法正常解密,解决方法:修改ConfigsFile/SysConfig.config里的IsEndDataBaseStr为false。");
+                    }
+                    return conn;
+                }
+            }
+            else
+            {
+                
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(_ConnectionStringSysUser);
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    return _ConnectionStringSysUser;
+                }
+            }
+            
+
+        }
+
+        public string GetConnectionStringSysUserWrite()
+        {
+            if (SysConfigs.ConfigsControl.Instance.IsEndDataBaseStr)
+            {
+                string deskey = SysConfigs.ConfigsControl.Instance.EncryptionKey;
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(DES.Decode(ConnectionStringSysUserWrite, deskey));
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+
+
+                    string conn = DES.Decode(ConnectionStringSysUserWrite, deskey);
+                    if (string.IsNullOrEmpty(conn))
+                    {
+                        throw new Exception("调用 EbSite.Base.Configs.BaseCinfigs.ConfigsInfo.GetConnectionStringSysUser()出错，您设置了数据库连接串加密，可是无法正常解密,解决方法:修改ConfigsFile/SysConfig.config里的IsEndDataBaseStr为false。");
+                    }
+                    return conn;
+                }
+            }
+            else
+            {
+
+                if (Equals(DataLayerType, "Access"))
+                {
+
+                    string sConn = Utils.GetMapPath(ConnectionStringSysUserWrite);
+
+                    return string.Format(@"Provider=Microsoft.Jet.OleDb.4.0;Data Source={0};Persist Security Info=True;", sConn);
+                }
+                else
+                {
+                    return ConnectionStringSysUserWrite;
+                }
+            }
+
+
+        }
+
+        public string ConnectionStringSysUserWrite { get; set; }
+        /// <summary>
+        /// 用户系统用的数据库连接串
+        /// </summary>
+        public string ConnectionStringSysUser
+        {
+            get
+            {
+
+                return _ConnectionStringSysUser;
+            }
+            set
+            {
+                _ConnectionStringSysUser = value;
+            }
+        }
+
+        /// <summary>
+        /// 数据表前缀
+        /// </summary>
+        public string TablePrefix
+        {
+            get
+            {
+                return _TablePrefix;
+            }
+            set
+            {
+                _TablePrefix = value;
+            }
+        }
+        /// <summary>
+        /// 用户数据表前缀
+        /// </summary>
+        public string TablePrefixUser
+        {
+            get
+            {
+                return _TablePrefixUser;
+            }
+            set
+            {
+                _TablePrefixUser = value;
+            }
+        }
+    }
+}

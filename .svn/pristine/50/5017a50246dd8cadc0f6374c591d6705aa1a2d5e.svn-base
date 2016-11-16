@@ -1,0 +1,64 @@
+﻿
+2016.02.26 01:30:51
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=43
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：BLL
+	异常方法：System.String get_projectids()
+	堆栈信息：   在 BLL.Base.Page.UserPage.get_projectids() 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\UserPage.cs:行号 19
+   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 340
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.02.26 01:31:00
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=43
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：BLL
+	异常方法：System.String get_projectids()
+	堆栈信息：   在 BLL.Base.Page.UserPage.get_projectids() 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\UserPage.cs:行号 19
+   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 340
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.02.26 01:31:08
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/oProjectList.aspx?treeid=43
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：BLL
+	异常方法：System.String get_projectids()
+	堆栈信息：   在 BLL.Base.Page.UserPage.get_projectids() 位置 c:\Users\admin\Desktop\beixin\BLL\base\Page\UserPage.cs:行号 19
+   在 ASP.control_oprojectlist_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 位置 c:\Users\admin\Desktop\beixin\Web\Control\oProjectList.aspx:行号 340
+   在 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   在 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   在 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   在 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   在 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------

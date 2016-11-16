@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="password.html">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+    <ul>
+        <div class="wl_Nnav"><a href="basisinfo -基础信息管理.html">基础信息</a></div>
+        <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html">物流基础信息</a>
+            <ul>
+                <li><a href="basisinfo_wmdd -物流基础信息 - 目的地信息.html" >目的地信息</a></li>
+                <li><a href="basisinfo_wsj-物流基础信息 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_wclxx-物流基础信息 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html">同城基础信息</a>
+            <ul>
+                <li><a href="basisinfo_tddxx-同城基础信息 - 段道信息.html" >段道信息</a></li>
+                <li><a href="basisinfo_tpsxx-同城基础信息 - 配送信息.html" >配送员信息</a></li>
+            </ul>
+        </li>
+        <li><a href="basisinfo_ddsf-第三方快递基础.html">第三方快递基础信息</a>
+        	<ul>
+                <li><a href="basisinfo_ddsf-第三方快递基础.html" >快递公司</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="othermail-其他邮件.html">其它邮件</a></div>
+        <div class="wl_Nnav"><a href="logistics_wlist-物流-汇总列表.html">物流信息</a></div>
+        <li>
+        	<ul>
+            	<li><a href="logistics_wlist-物流-汇总列表.html">物流出库汇总列表</a></li>
+                <li><a href="logistics_wdfh-物流-待发货.html">待发货</a></li>
+                <li><a href="logistics_wyfh-物流-已发货.html">已发货</a></li>
+        	</ul>
+        </li>
+        <div class="wl_Nnav"><a href="city_Tlist-同城-汇总列表.html">同城</a></div>
+        <li>
+        	<ul>
+           		<li><a href="city_Tlist-同城-汇总列表.html">同城出库汇总表</a></li>
+        		<li><a href="city_Tdck-同城-待出库.html">待发货</a></li>
+        		<li><a href="city_Tdck-同城-已出库.html">已发货</a></li>
+            </ul>
+        </li>
+        <div class="wl_Nnav"><a href="three_Slist-第三方-汇总列表.html">第三方快递</a></div>
+        <li>
+        	<ul>
+                <li><a href="three_Slist-第三方-汇总列表.html">第三方出库汇总列表</a></li>
+                <li><a href="three_Sdfh-第三方-待发货.html">待发货</a></li>
+                <li><a href="three_Syfh-第三方-已发货.html">已发货</a></li>
+       		</ul>
+        </li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">车辆信息</div>
+        <div class="ez_khtab">
+        	<div class="ez_searchTop ">
+            	<input  placeholder="请输入您要搜索的车辆"/>
+                <input type="button" value="搜索" class="ez_btn1"  style="width:75px; height:34px; text-align:center; background:#267cb7; color:#fff;"/>
+            </div>
+            <div class="ez_khoper w3"><button type="submit" class="ez_btn1" onclick="showPop();" style="width:75px;">新增</button></div>
+            <table class="altrowstable" id="alternatecolor">
+                <tr>
+                    <th>车主</th>
+                    <th>车型</th>
+                    <th>车牌号</th>
+                    <th>车架号</th>
+                    <th>出厂日期</th>
+                    <th>车龄</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td>赵恩志</td>
+                    <td>中型仓储式货车</td>
+                    <td>京L53710</td>
+                    <td>FOUS854SG575SFF85</td>
+                    <td>2005.6</td>
+                    <td>11</td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>赵恩志</td>
+                    <td>中型箱货</td>
+                    <td>蒙D86358</td>
+                    <td>EE85685S4F88F8SS8</td>
+                    <td>2001.6</td>
+                    <td>15</td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>赵恩志</td>
+                    <td>小型货车</td>
+                    <td>蒙D85625</td>
+                    <td>F85ERT585FF7457S4</td>
+                    <td>2008.1</td>
+                    <td>8</td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>孙琦</td>
+                    <td>中型仓储式货车</td>
+                    <td>京L70113</td>
+                    <td>FOUS854SG575SFF85</td>
+                    <td>2005.6</td>
+                    <td>11</td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>孙琦</td>
+                    <td>中型仓储式货车</td>
+                    <td>蒙D55698</td>
+                    <td>EE85685S4F88F8SS8</td>
+                    <td>2001.6</td>
+                    <td>15</td>
+                    <td>无</td>
+                </tr>
+                <tr>
+                    <td>孙琦</td>
+                    <td>小型货车</td>
+                    <td>蒙D56823</td>
+                    <td>F85ERT585FF7457S4</td>
+                    <td>2008.1</td>
+                    <td>8</td>
+                    <td>无</td>
+                </tr>
+                
+            </table>
+            <p class="Accord">每页显示 10 条，共 50 页，总计 500 条</p>
+            <div class="scott">
+                <span class="disabled"> <上一页 </span>
+                <span class="current">1</span>
+                <a href="#?page=2">2</a>
+                <a href="#?page=3">3</a>
+                <a href="#?page=4">4</a>
+                <a href="#?page=5">5</a>
+                <a href="#?page=6">6</a>
+                <a href="#?page=7">7</a>
+                <div class="more">...</div>
+                <a href="#?page=7">20</a>
+                <a href="#?page=2">下一页 > </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mydiv" id="popDiv"  style="display:none;">
+    <div class="ez_Tbox">
+        <div class="ez_InfoTit">新增车辆信息</div>
+        <div class="closd"><a href="javascript:closePop();"><img src="img/closd.png" /></a></div>
+        <table class="altrowstable" id="alternatecolor">
+            <tr>
+                <th>车主姓名</th>
+                <th>车型</th>
+                <th>车牌号</th>
+                <th>车架号</th>
+                <th>出厂日期</th>
+                <th>车龄</th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+                <td><input type="email" class="wl_Input" id="exampleInputEmail1" placeholder=""/></td>
+            </tr>
+        </table>
+        <div class="ez_TBtn" style="text-align:center">
+            <button type="submit" class="ez_btn1" onclick="closePop();" style="width:110px;margin-right:20px;">保存</button>
+        </div>
+    </div>
+</div>
+<div class="bg" id="popBgDiv"  style="display:none;"></div>
+
+
+<script type="text/javascript">
+    function showPop(){
+        $("#popDiv").css("display","block");
+        $("#popBgDiv").css("display","block");
+    }
+
+    function closePop(){
+        $("#popDiv").css("display","none");
+        $("#popBgDiv").css("display","none");
+    }
+</script>
+</body>
+</html>

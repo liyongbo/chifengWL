@@ -1,0 +1,43 @@
+﻿<div class="left tree" style="width: 210px; background: url(../images/treebg.jpg) left repeat-y; z-index: 100;">
+            
+                <%if (listTree != null && listTree.Count > 0)
+              {
+                  List<Entity.Tree> rootTrees = listTree.Where(c => (c.parentid == 0 && c.category == 0)).ToList();
+                  for (int i = 0; i < rootTrees.Count; i++)
+                  {       %>
+
+            <a class="w96 block <%=(i==0?"w96hover":"") %> <%=(i==1?"w962":"") %>" href="<%=rootTrees[i].linkurl%>"><%=rootTrees[i].treename %></a>
+            <%    } %>
+            <%
+                  List<Entity.Tree> rootTree = listTree.Where(c => (c.parentid == rootTrees[0].id && c.category == 1)).ToList();
+                  for (int i = 0; i < rootTree.Count; i++)
+                  { 
+            %>
+            <div class="jcsj" id="root<%=rootTree[i].id %>" name="root<%=rootTree[i].id %>">
+                <a href="<%=!string.IsNullOrEmpty(rootTree[i].linkurl)?(rootTree[i].linkurl+"?treeid="+rootTree[i].id):"javascript:void(0)" %>"><span class="ord ord<%=i + 1 %>"><%=rootTree[i].treename %></span></a>
+            </div>
+            <%List<Entity.Tree> secTree = listTree.Where(c => c.parentid == rootTree[i].id).ToList();
+              if (secTree.Count > 0)
+              {%>
+            <dl class="ztmb" style="display: none;">
+                <% 
+                  for (int j = 0; j < secTree.Count; j++)
+                  { 
+                %><dt class="dt jian"><a href="<%=!string.IsNullOrEmpty(secTree[j].linkurl)?(secTree[j].linkurl+"?treeid="+secTree[j].id):"javascript:void(0)" %>" <% if (secTree[j].id == 28) Response.Write("style=\"color:#0B71C8\""); else if (secTree[j].id == 14 || secTree[j].id == 15 || secTree[j].id == 16) Response.Write("style=\"color:#DD1119\""); else if (secTree[j].id == 47 || secTree[j].id == 48 || secTree[j].id == 49 || secTree[j].id == 50 || secTree[j].id == 51 || secTree[j].id == 52) Response.Write("style=\"color:#2E8C0E\""); else Response.Write("style=\"color:#333333\""); %> ><span><%=secTree[j].treename %></span></a></dt>
+                <%List<Entity.Tree> thirdTree = listTree.Where(c => c.parentid == secTree[j].id).ToList();
+                  for (int m = 0; m < thirdTree.Count; m++)
+                  {
+                      List<Entity.Tree> listFour = listTree.Where(c => c.parentid == thirdTree[m].id).ToList();
+                %>
+                <dt class="dd <%=listFour.Count > 0 ? "jian" : "" %>" style="display: block;padding-left:40px;background-position-x:25px"><a href="<%=!string.IsNullOrEmpty(thirdTree[m].linkurl)?(thirdTree[m].linkurl+"?treeid="+thirdTree[m].id):"javascript:void(0)" %>" <%  if (thirdTree[m].id == 43 || thirdTree[m].id == 44) Response.Write("style=\"color:#0B71C8\""); else if (thirdTree[m].id == 53 || thirdTree[m].id == 54) Response.Write("style=\"color:#2E8C0E\""); else Response.Write("style=\"color:#333333\"");%> ><span><%=thirdTree[m].treename %></span></a></dt>
+                <% for (int w = 0; w < listFour.Count; w++)
+                  { %>
+                <dd class="dd" style="display: block;padding-left:55px;width:105px"><a href="<%=listFour[w].linkurl %>?treeid=<%=listFour[w].id %>" <%  if (listFour[w].id == 43 || listFour[w].id == 44) Response.Write("style=\"color:#0B71C8\""); else if (listFour[w].id == 53 || listFour[w].id == 54) Response.Write("style=\"color:#2E8C0E\""); else Response.Write("style=\"color:#333333\"");%> ><span><%=listFour[w].treename %></span></a></dd>
+                <%} %>
+                <%}
+                  }%>
+            </dl>
+            <%}
+                  }
+              } %>
+        </div>

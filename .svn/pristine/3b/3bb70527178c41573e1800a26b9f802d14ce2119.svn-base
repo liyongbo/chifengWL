@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>物流管理平台</title>
+<link href="css/PublicStyle.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function altRows(id){
+            if(document.getElementsByTagName){
+
+                var table = document.getElementById(id);
+                var rows = table.getElementsByTagName("tr");
+
+                for(i = 0; i < rows.length; i++){
+                    if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                    }else{
+                        rows[i].className = "oddrowcolor";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            altRows('alternatecolor');
+        }
+    </script>
+</head>
+
+<body>
+<div class="ez_headBar">
+	<div class="ez_title"><span><img src="img/logo.png" /></span><h1>物流管理平台</h1></div>
+    <div class="ez_userMsg">您好，王小明<a href="#">退出</a><a href="#">修改密码</a></div>
+</div>
+<div class="ez_mainL">
+	<ul>
+        <li><a href="basisinfo -基础信息管理.html">基础信息管理</a>
+            <ul>
+                <li><a href="basisinfo_mdd -基础信息管理 - 目的地信息.html" >目的地信息</a></li>
+                <li><a href="basisinfo_sj-基础信息管理 - 司机信息.html" >司机信息</a></li>
+                <li><a href="basisinfo_clxx-基础信息管理 - 车辆信息.html">车辆信息</a></li>
+            </ul>
+        </li>
+        <li><a href="#">汇总列表</a></li>
+        <li><a href="basisinfo_sj-装车.html">出库装车交接单</a></li>
+    </ul>
+</div>
+<div class="ez_mainR ov">
+	<div class="ez_InfoBox">
+        <div class="ez_InfoTit">基础信息管理</div>
+        <div class="ez_khoper w3"><button type="submit" class="ez_btn1" style="width:75px;">打印</button></div>
+        <div class="wl_box">
+            <a href="#"><img src="img/wlimg1.png" /><span>物流</span></a>
+            <a href="#"><img src="img/wltc.png" /><span>同城配送</span></a>
+            <a href="#"><img src="img/wldsf.png" /><span>第三方快递</span></a>
+            <a href="#"><img src="img/wlmdd.png" /><span>目的地</span></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

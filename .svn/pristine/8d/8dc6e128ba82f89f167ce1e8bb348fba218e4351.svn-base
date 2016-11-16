@@ -1,0 +1,149 @@
+﻿
+2016.01.21 04:39:36
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/PlanProjectList.aspx?treeid=14&ram=37114243
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.PlanProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\PlanProjectList.aspx.cs:行号 122
+   在 web.Control.PlanProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\PlanProjectList.aspx.cs:行号 157
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.21 05:12:16
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/JianZhengProjectList.aspx?treeid=48
+	错误信息：值不能为 null。
+参数名: source
+	错误源：System.Core
+	异常方法：System.Collections.Generic.IEnumerable`1[TSource] Where[TSource](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,System.Boolean])
+	堆栈信息：   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 web.Control.JianZhengProjectList.<>c__DisplayClass13.<exportexcel>b__d(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 web.Control.JianZhengProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 web.Control.JianZhengProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 147
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.21 05:12:20
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/JianZhengProjectList.aspx?treeid=48
+	错误信息：值不能为 null。
+参数名: source
+	错误源：System.Core
+	异常方法：System.Collections.Generic.IEnumerable`1[TSource] Where[TSource](System.Collections.Generic.IEnumerable`1[TSource], System.Func`2[TSource,System.Boolean])
+	堆栈信息：   在 System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 web.Control.JianZhengProjectList.<>c__DisplayClass13.<exportexcel>b__d(Project c) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 web.Control.JianZhengProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 web.Control.JianZhengProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 147
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.21 05:14:02
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/JianZhengProjectList.aspx?treeid=48
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.JianZhengProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 web.Control.JianZhengProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 143
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.21 05:15:07
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/JianZhengProjectList.aspx?treeid=48
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.JianZhengProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 web.Control.JianZhengProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 143
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.21 05:15:13
+.客户信息：
+	Ip:::1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/JianZhengProjectList.aspx?treeid=48
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.JianZhengProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 122
+   在 web.Control.JianZhengProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\JianZhengProjectList.aspx.cs:行号 143
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
+2016.01.21 05:16:41
+.客户信息：
+	Ip:127.0.0.1
+	浏览器:Chrome
+	浏览器版本:45
+	操作系统:WinNT
+.错误信息：
+	页面：http://localhost:58555/Control/LuZhengProjectList.aspx?treeid=49
+	错误信息：未将对象引用设置到对象的实例。
+	错误源：web
+	异常方法：Void exportexcel()
+	堆栈信息：   在 web.Control.LuZhengProjectList.exportexcel() 位置 c:\Users\admin\Desktop\beixin\Web\Control\LuZhengProjectList.aspx.cs:行号 129
+   在 web.Control.LuZhengProjectList.HiddenField1_ValueChanged(Object sender, EventArgs e) 位置 c:\Users\admin\Desktop\beixin\Web\Control\LuZhengProjectList.aspx.cs:行号 156
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+--------------------------------------------------------------------------------------------------
